@@ -1,7 +1,7 @@
 var random=0;
 var word="";
 var animals=["macka","pes","prasa"];
-var capicity=["slavo","daj","tu","co","chces"];
+var cities=["slavo","daj","tu","co","chces"];
 
 
 
