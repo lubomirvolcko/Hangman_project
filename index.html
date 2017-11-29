@@ -2,23 +2,30 @@
 <html>
 
   <head>
-
-   
-
   <meta charset="utf-8">
-    <title></title>
-    <link type="text/css" href="hangman.css" rel="stylesheet">
+      <link type="text/css" href="hangman.css" rel="stylesheet">
     <script src="hangman.js"></script>
-
   </head>
 
   <body>
-    
-  <p>Choose category:</p>
-        <div id="animals" onclick="animal()">Animals</div> <div id="capital" onclick="capcity()">Capital city</div>
-          <div id="test"></div>   
-      
-          
-     
+  
+  <body onload="time()"> <!-- vymazanie single page na zaciatku -->
+  
+  <div id="entryPage">
+    <button id="play" onclick="play()">PLAY!</button>
+  </div>
+
+  <div id="singlePage"> 
+        <div>Pick a difficult:</div>
+                    <button id="easy" onclick="easy()">Easy</button>
+                    <button id="hard" onclick="hard()">Hard</button>
+                </div>
+
+  <div id="catPage"> 
+    <div>Choose category:</div>
+      <button id="animals" onclick="animals()">Animals</button>
+      <button id="cities" onclick="cities()">Cities</button>    
+    </div>
+  
   </body>
 </html>

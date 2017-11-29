@@ -5,14 +5,42 @@ var capicity=["slavo","daj","tu","co","chces"];
 
 
 
- 
-function animal(){
-    random = Math.floor(Math.random()*animals.length);
+
+ function play(){
+  document.getElementById('entryPage').style.display = "none";
+  document.getElementById('singlePage').style.display = "block";
+}
+
+ function easy(){
+  document.getElementById('entryPage').style.display = "none";
+  document.getElementById('singlePage').style.display = "none";
+  document.getElementById('catPage').style.display = "block";
+}
+
+function hard(){
+  document.getElementById('entryPage').style.display = "none";
+  document.getElementById('singlePage').style.display = "none";
+  document.getElementById('catPage').style.display = "block";
+}
+
+
+function time () { 
+  document.getElementById('entryPage').style.display = "block";			
+  document.getElementById('singlePage').style.display = "none";
+  document.getElementById('catPage').style.display = "none"; 				//nezobrazuje sa "single page"
+} 
+
+/* function animals(){
+    random = Math.floor(Math.random()*animals.length);		//Poprepájať a tak vymazať komentár inak to nepôjdeeee
     word = animals[random];
     }
 
- function capcity(){
-    random = Math.floor(Math.random()*capicity.length);
-    word = capicity[random];
+
+function cities(){
+    random = Math.floor(Math.random()*cities.length);		//To isté
+    word = cities[random];
     console.log(random);
-    }
+    } */
+
+
+
