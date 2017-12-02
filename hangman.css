@@ -1,1 +1,11 @@
 /*hangman.css*/
+.letter {
+    font-size: 20px;
+    color: blue;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+}

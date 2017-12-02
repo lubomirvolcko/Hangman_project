@@ -2,33 +2,82 @@
 <html>
 
   <head>
-  <meta charset="utf-8">
-      <link type="text/css" href="hangman.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <link type="text/css" href="hangman.css" rel="stylesheet">
     <script src="hangman.js"></script>
   </head>
-
-  <body>
   
-  <body onload="time()"> <!-- vymazanie single page na zaciatku -->
-  
-  <div id="entryPage">
-    <button id="play" onclick="play()">PLAY!</button>
+  <body onload="game()"> <!-- vymazanie single page na zaciatku -->
+    
+      <div id="newgame">
+    <button class="btn" id="btnNewgame" onclick="funNewgame()">NEW GAME</button>
+  </div>
+      
+      <div id="play">
+    <button class="btn" id="btnPlay" onclick="game()">PLAY!</button>
   </div>
 
-  <div id="singlePage"> 
-        <div>Pick a difficult:</div>
-                    <button id="easy" onclick="easy()">Easy</button>
-                    <button id="hard" onclick="hard()">Hard</button>
+  <div id="difficulity"> 
+        <div>Choose a difficulity:</div>
+                    <button class="btn" id="btnEasy" value="0" onclick="funDifficulity(0)">Easy</button>
+                    <button class="btn" id="btnHard" value="1" onclick="funDifficulity(1)">Hard</button>
                 </div>
 
-  <div id="catPage"> 
-    <div>Choose category:</div>
-      <button id="animals" onclick="animals()">Animals</button>
-      <button id="cities" onclick="cities()">Cities</button>    
+  <div id="category"> 
+    <div>Choose a category:</div>
+      <button class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</button>
+      <button class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</button>    
+    </div>
+      
+
+
+  <div id="gWord"></div>
+      
+    <div id="alphabet">
+        <table width="400px">
+            <tr>
+                <td class="letter" id="A" onclick="checkLetter(0)">A</td>
+                <td class="letter" id="B" onclick="checkLetter(1)">B</td>
+                <td class="letter" id="C" onclick="checkLetter(2)">C</td>
+                <td class="letter" id="D" onclick="checkLetter(3)">D</td>
+                <td class="letter" id="E" onclick="checkLetter(4)">E</td>
+            </tr>
+            <tr>
+                <td class="letter" id="F" onclick="checkLetter(5)">F</td>
+                <td class="letter" id="G" onclick="checkLetter(6)">G</td>
+                <td class="letter" id="H" onclick="checkLetter(7)">H</td>
+                <td class="letter" id="I" onclick="checkLetter(8)">I</td>
+                <td class="letter" id="J" onclick="checkLetter(9)">J</td>
+                <td class="letter" id="K" onclick="checkLetter(10)">K</td>
+            </tr>
+            <tr>
+                <td class="letter" id="L" onclick="checkLetter(11)">L</td>
+                <td class="letter" id="M" onclick="checkLetter(12)">M</td>
+                <td class="letter" id="N" onclick="checkLetter(13)">N</td>
+                <td class="letter" id="O" onclick="checkLetter(14)">O</td>
+                <td class="letter" id="P" onclick="checkLetter(15)">P</td>
+            </tr>
+            <tr>
+                <td class="letter" id="Q" onclick="checkLetter(16)">Q</td>
+                <td class="letter" id="R" onclick="checkLetter(17)">R</td>
+                <td class="letter" id="S" onclick="checkLetter(18)">S</td>
+                <td class="letter" id="T" onclick="checkLetter(19)">T</td>
+                <td class="letter" id="U" onclick="checkLetter(20)">U</td>
+            </tr>
+            <tr>
+                <td class="letter" id="V" onclick="checkLetter(21)">V</td>
+                <td class="letter" id="W" onclick="checkLetter(22)">W</td>
+                <td class="letter" id="X" onclick="checkLetter(23)">X</td>
+                <td class="letter" id="Y" onclick="checkLetter(24)">Y</td>
+                <td class="letter" id="Z" onclick="checkLetter(25)">Z</td>
+            </tr>
+        </table>
+    </div>
+      
+    <div id="divCanvas">
+        <canvas id="canvas" width="500" height="500" style="border:1px solid silver;">Your browser does not support the HTML5 canvas tag.</canvas>  
     </div>
 
-
-
-  <div id="gWord"> </div>
+  
   </body>
 </html>
