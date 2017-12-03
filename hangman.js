@@ -24,91 +24,99 @@ var gWord;                                                  //defined for guessi
 var character = "_ ";                                       //defined for getting character _ instead of letter
 var checkNewgame=0;											//define for chceking if is pressed btn Newgame
 
-function funNewgame(){
+function funNewgame(){ //set visible/unvisible div in html
     document.getElementById('newgame').style.display = "none";
     document.getElementById('difficulity').style.display = "block";
     document.getElementById('alphabet').style.display = "none";
-	checkNewgame++;	
-}
+	checkNewgame++;	//for finding if was pressed new game
+} 
 
-function funDifficulity(value){
+function funDifficulity(value){ //set visible/unvisible div in html
     document.getElementById('play').style.display = "none";
     document.getElementById('difficulity').style.display = "none";
     document.getElementById('category').style.display = "block"; 
     document.getElementById('alphabet').style.display = "none";
-    gameDiff = value;
+    gameDiff = value; //saveing choosen difficulity to var gameDiff
     console.log("Difficulity: "+gameDiff);
 }
 
-function funCategory(value){
+function funCategory(value){ //set visible/unvisible div in html
     document.getElementById('play').style.display = "block";
     document.getElementById('difficulity').style.display = "none";
-    document.getElementById('category').style.display = "none";
+    document.getElementById('category').style.display = "none"; 
     document.getElementById('alphabet').style.display = "none";
-    gameCat = value;
+    gameCat = value; //saveing choosen category to var gameCat
     console.log("Category: "+gameCat);
 }
 
-function checkLetter(value) {
-        var letter = alphabet[value];
+function checkLetter(value) { //function for chcecking pressed letter
+        var letter = alphabet[value]; //save pressed letter to var letter
     
         console.log(value);
         console.log(letter);
         }
 
-function game () {
+function game () { //function for game
         
     
-        document.getElementById('play').style.display = "none";     
-        document.getElementById('difficulity').style.display = "none";
-        document.getElementById('category').style.display = "none";
-        if(checkNewgame==0)
+        document.getElementById('play').style.display = "none";  //set visible/unvisible div in html 
+        document.getElementById('difficulity').style.display = "none"; //set visible/unvisible div in html
+        document.getElementById('category').style.display = "none"; //set category btn to unvisible
+        if(checkNewgame==0) //set aplhabet keyboard to unvisible
 		   {
 		   	document.getElementById('alphabet').style.display = "none";
-		   }else if(checkNewgame>0)
+		   }else if(checkNewgame>0) //set aplhabet keyboard to visible
 		   {
 			document.getElementById('alphabet').style.display = "block"; 
 			}
-        if(gameDiff==0)
+        if(gameDiff==0) //if was choosen difficulity easy
           {
-              if(gameCat==0)
+              if(gameCat==0) //if was choosen category animals
             	{
-                	random = Math.floor(Math.random()*easyAnimals.length); 
-                	word = easyAnimals[random];
-            	}else if(gameCat==1)
+                	random = Math.floor(Math.random()*easyAnimals.length); //generate random  word from field easyAnimals
+                	word = easyAnimals[random]; //save random word from field easyAnimals to var word
+            	}else if(gameCat==1) //if was choosen category cities
             	{
-                	random = Math.floor(Math.random()*easyCities.length);  
-                	word = easyCities[random];
+                	random = Math.floor(Math.random()*easyCities.length); //generate random  word from field easyCities 
+                	word = easyCities[random]; //save random word from field easyCities to var word
             	}
               
-          }else if(gameDiff==1)
+          }else if(gameDiff==1) //if was choosen difficulity hard
               {
-                  if(gameCat==0)
+                  if(gameCat==0) //if was choosen category animals
             		{
-                		random = Math.floor(Math.random()*hardAnimals.length); 
-                		word = hardAnimals[random];
-            		}else if(gameCat==1)
+                		random = Math.floor(Math.random()*hardAnimals.length); //generate random  word from field hardAnimals 
+                		word = hardAnimals[random]; //save random word from field hardAnimals to var word
+            		}else if(gameCat==1) //if was choosen category cities
             		{
-                		random = Math.floor(Math.random()*hardCities.length);  
-                		word = hardCities[random];
+                		random = Math.floor(Math.random()*hardCities.length);  //generate random  word from field hardCities  
+                		word = hardCities[random]; //save random word from field easyCities to var word
             		}
               }
         
             console.log(word);
             var x=0; //define for counting letters
-            var wInstead='';
-            var underline='_ ';   
-            while(x<word.length)
+            var wInstead=''; //set '' (nothing/empty space) to var wInstead
+            var underline='_ ';  //set '_ ' to var underline 
+            while(x<word.length) //cycle which will doing until length of random generated word
             {
-                wInstead=wInstead+underline;
-                x++;
+                wInstead=wInstead+underline; //set var wInstead + var underline
+                x++; 
             }
-            document.getElementById('gWord').innerHTML=wInstead;
+            document.getElementById('gWord').innerHTML=wInstead; //put all var wInstead to div with id gWord
 			//CANVAS
 			/*var c = document.getElementById('canvas');
-              var ctx = c.getContext("2d");
-              ctx.moveTo(10,10);
-              ctx.lineTo(450,450);
-              ctx.stroke();
-			  */
+            var ctx = c.getContext("2d");
+			var img1 = document.createElement("IMG");
+    		img1.setAttribute("src", "img1.png");
+			img1.setAttribute("id", "img1");
+    		document.body.appendChild(img1);
+    		ctx.drawImage(img1,10,10);
+			
+			var img2 = document.createElement("IMG");
+    		img2.setAttribute("src", "img2.png");
+			img2.setAttribute("id", "img2");
+    		document.body.appendChild(img2);
+    		ctx.drawImage(img2,10,10);*/
+			  
 }

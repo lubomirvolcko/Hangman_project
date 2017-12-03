@@ -9,3 +9,11 @@
 .btn {
     cursor: pointer;
 }
+
+#img1 {
+	position: relative;
+}
+
+#img2 {
+	position: relative;
+}
