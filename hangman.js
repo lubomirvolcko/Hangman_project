@@ -23,6 +23,7 @@ var btnCities = document.getElementById('btnCities');       //defined button cit
 var gWord;                                                  //defined for guessing word
 var character = "_ ";                                       //defined for getting character _ instead of letter
 var checkNewgame=0;											//define for chceking if is pressed btn Newgame
+var answerArray=[];                                         //define array for underline and guessed letter
 
 function funNewgame(){ //set visible/unvisible div in html
     document.getElementById('newgame').style.display = "none";
@@ -51,6 +52,14 @@ function funCategory(value){ //set visible/unvisible div in html
 
 function checkLetter(value) { //function for chcecking pressed letter
         var letter = alphabet[value]; //save pressed letter to var letter
+        for(var i=0;i<word.length;i++)    //browse word length
+        {
+            if(word[i]==letter)          //compare insert letter from user with guessed word
+            {
+                answerArray[i]=letter;         //if guessed letter is correct insert it to position
+            }
+        }
+        document.getElementById("gWord").innerHTML=answerArray.join(" ");  // print letter instead underline
     
         console.log(value);
         console.log(letter);
@@ -95,15 +104,22 @@ function game () { //function for game
               }
         
             console.log(word);
-            var x=0; //define for counting letters
-            var wInstead=''; //set '' (nothing/empty space) to var wInstead
-            var underline='_ ';  //set '_ ' to var underline 
-            while(x<word.length) //cycle which will doing until length of random generated word
-            {
-                wInstead=wInstead+underline; //set var wInstead + var underline
-                x++; 
-            }
-            document.getElementById('gWord').innerHTML=wInstead; //put all var wInstead to div with id gWord
+            
+            
+           for(var i = 0; i<word.length;i++)  //browse word length
+           {
+            answerArray[i]="_";               //write underlines exact position
+
+           }
+           var s=answerArray.join(" "); //insert between underlines space
+           document.getElementById("gWord").innerHTML= s; //write on screen underlines
+
+
+
+
+
+
+
 			//CANVAS
 			/*var c = document.getElementById('canvas');
             var ctx = c.getContext("2d");
