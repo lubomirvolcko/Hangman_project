@@ -71,61 +71,15 @@ function checkLetter(value) { //function for chcecking pressed letter
         console.log(value);
         console.log(letter);
 
-
-        if(value==0)
-        document.getElementById("A").style.visibility = "hidden";//Hide letter after click
-        else if(value==1) 
-         document.getElementById("B").style.visibility = "hidden";
-         else if(value==2) 
-         document.getElementById("C").style.visibility = "hidden";
-         else if(value==3) 
-         document.getElementById("D").style.visibility = "hidden";
-         else if(value==4) 
-         document.getElementById("E").style.visibility = "hidden";
-         else if(value==5) 
-         document.getElementById("F").style.visibility = "hidden";
-         else if(value==6) 
-         document.getElementById("G").style.visibility = "hidden";
-         else if(value==7) 
-         document.getElementById("H").style.visibility = "hidden";
-         else if(value==8) 
-         document.getElementById("I").style.visibility = "hidden";
-         else if(value==9) 
-         document.getElementById("J").style.visibility = "hidden";
-         else if(value==10) 
-         document.getElementById("K").style.visibility = "hidden";  
-         else if(value==11) 
-         document.getElementById("L").style.visibility = "hidden";
-         else if(value==12) 
-         document.getElementById("M").style.visibility = "hidden";
-         else if(value==13) 
-         document.getElementById("N").style.visibility = "hidden";
-         else if(value==14) 
-         document.getElementById("O").style.visibility = "hidden";
-         else if(value==15) 
-         document.getElementById("P").style.visibility = "hidden";
-         else if(value==16) 
-         document.getElementById("Q").style.visibility = "hidden";
-         else if(value==17) 
-         document.getElementById("R").style.visibility = "hidden";
-         else if(value==18) 
-         document.getElementById("S").style.visibility = "hidden";
-         else if(value==19) 
-         document.getElementById("T").style.visibility = "hidden";
-         else if(value==20) 
-         document.getElementById("U").style.visibility = "hidden";
-         else if(value==21) 
-         document.getElementById("V").style.visibility = "hidden";
-         else if(value==22) 
-         document.getElementById("W").style.visibility = "hidden";
-         else if(value==23) 
-         document.getElementById("X").style.visibility = "hidden";
-         else if(value==24) 
-         document.getElementById("Y").style.visibility = "hidden";
-         else if(value==25) 
-         document.getElementById("Z").style.visibility = "hidden";
+    for(var g=0;g<26;g++) 
+{
+    if(letter==alphabet[g])
+    document.getElementById(alphabet[g]).style.visibility = "hidden"; //hide letter after click
+}
 
 
+
+     
         }
 
 function game () { //function for game
