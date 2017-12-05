@@ -65,8 +65,20 @@ function checkLetter(value) { //function for chcecking pressed letter
         lives -= 1;
       }
         document.getElementById("gWord").innerHTML=answerArray.join(" ");  // print letter instead underline
+
+        if(lives>0)     // if lives reach 0 then print Game over
+            {
+                document.getElementById("guesses").innerHTML="Lives: "+lives;
+                /*if(word)
+                {
+                    document.getElementById("guesses").innerHTML="You win!";    
+                }*/
+            }else if(lives<=0)
+                {
+                    document.getElementById("guesses").innerHTML="Game Over!";
+                }
         
-        document.getElementById("guesses").innerHTML="Lives: "+lives;
+        
     
         console.log(value);
         console.log(letter);
