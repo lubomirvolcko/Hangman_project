@@ -1,30 +1,27 @@
 #header{                                            /* header */
     width: auto;
-    height: 200px;
+    height: 150px;
     background-color: #009fbc;
     margin: 0px auto;
 }
 
 #score{
-    font-family: Hastoler;
-    color:  #f8e6d4;
-    font-size: 64px;
-    font-weight: 200;
+    font-family: Hastoler, serif;
+    color: #009fbc;
+    font-size: 50px;
     text-align: right;
     position: relative;
-    top: -100px;
-    left: -180px;
+    margin: 0px 500px auto;
 }
 
-div.puzzle1{
+puzzle1{
     width: 57px;
     height: 45px;
     position: relative;
-    left: 510px;
-    top: -35px;
+    margin: 50px 500px auto;
 }
 
-div.puzzle2{
+puzzle2{
     width: 66px;
     height: 45px;
     position: relative;
@@ -35,7 +32,7 @@ div.puzzle2{
 
 #guesses{
     font-family: "Hastoler Regular", Times, serif;
-    color:  #f8e6d4;
+    color: #009fbc;
     text-align: left;
     font-size: 64px;
     font-weight: 400px;
@@ -49,11 +46,11 @@ div.puzzle2{
     height: 13px;
     background-color: #cd6a02;
     position: relative;
-    top: -40px;
+    margin: 0px auto;
 }
 
 body{                                                    /* Body */
-    width: 70%;
+    width: 60%;
 	background-color: #f8e6d4;
 	margin: 0 auto;
 }
@@ -96,7 +93,7 @@ div.down{
 
 
 .letter{
-    font-size: 70px;
+    font-size: 50px;
     color: #009fbc;
     font-family: Hastoler, serif;
     cursor: pointer;
@@ -113,16 +110,55 @@ div.down{
 	text-align: center;
 	padding: 5px;
 	margin: 10px auto;
-
 }
 
+#newgame:hover {
+	background-color: #cc6600;
+	color: white;
+}
 
-#alphabet{
+.btn{
+    cursor: pointer;
+	background-color: white;
+	width: 200px;
+	height: 60px;
+	font-family: Hastoler, serif;
+	font-size: 50px;
+	color: #009fbc;
+	text-align: center;
+	padding: 5px;
+	margin: 10px auto;
+}
+
+.btn:hover {
+	background-color: #cc6600;
+	color: white;	
+}
+
+.text {
+	font-family: Hastoler, serif;
+	font-size: 50px;
+	color: #009fbc;
+	text-align: center;
+	padding: 5px;
+	margin: 10px auto;
+}
+
+#alphabet {
 	background-color: #cacccd;
-	width: 405px;
-	height: 415px;
+	width: 400px;
+	height: 300px;
 	margin: 10px 80px auto;
 	float: right;
 }
 
+#canvas {
+	float: left;
+	text-align: right;
+}
 
+#mainimg {
+	width: 90%;
+	height: auto;
+	margin: 0px 50px auto;
+}

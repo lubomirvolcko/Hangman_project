@@ -10,52 +10,53 @@
   
     
   <body onload="game()"> <!-- vymazanie single page na zaciatku -->
-    
-      
+    <div><img id="logo" src="img/HangmanSovy_logo.svg"></div>
+	<!-- <div id="header">      <!-- HEADER
+  		
+		<div class="puzzle1">  <!-- PICTURE 1
+		<img src="img/puzzle/puzzle_player1.png">
+	</div>
+     <div class="puzzle2"> <!-- PICTURE 2
+    <!-- <img src="img/puzzle/puzzle_player2.png" style="width:100%">
+        </div>
+     
+     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE
+     </div>-->
+	  
       <div id="newgame">
     <div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
   </div>
       
       <div id="play">
-    <button class="btn" id="btnPlay" onclick="game()">PLAY!</button>
+    <div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
   </div>
 
   <div id="difficulity"> 
-        <div>Choose a difficulity:</div>
-                    <button class="btn" id="btnEasy" value="0" onclick="funDifficulity(0)">Easy</button>
-                    <button class="btn" id="btnHard" value="1" onclick="funDifficulity(1)">Hard</button>
+        <div class="text">Choose a difficulity:</div>
+                    <div class="btn" id="btnEasy" value="0" onclick="funDifficulity(0)">Easy</div>
+                    <div class="btn" id="btnHard" value="1" onclick="funDifficulity(1)">Hard</div>
                 </div>
 
   <div id="category"> 
-    <div>Choose a category:</div>
-      <button class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</button>
-      <button class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</button>    
+    <div class="text">Choose a category:</div>
+      <div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
+      <div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
     </div>
+
+      <div id="guesses"></div> 
+      <div id="score">Score:</div>
+      <div id="gWord"></div>
       
- <div id="header">      <!-- HEADER -->
-  <div id="guesses"></div> 
-     <div class="puzzle1">  <!-- PICTURE 1 -->
-     <img src="img/puzzle/puzzle_player1.png">
-         </div>
-     <div class="puzzle2"> <!-- PICTURE 2 -->
-    <img src="img/puzzle/puzzle_player2.png" style="width:100%">
-        </div>
-     <div id="score">Score:</div>
-     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
-     </div>
-      
-       
-      
-      <div id="footer">
+	  <!--<div id="footer">
      <div id="gWord"></div>
-    <div class="down">  <!-- PICTURE 3 -->
+    <div class="down">  <!-- PICTURE 3 
      <img src="img/down/down.png">
         </div>
     <div id="header_buttom_line2"></div>
-      </div>
+      </div> -->
       
     <div id="alphabet">
-        <table width="400px">
+        <table width="380px">
             <tr>
                 <td class="letter" id="A" onclick="checkLetter(0)">A</td>
                 <td class="letter" id="B" onclick="checkLetter(1)">B</td>
@@ -63,7 +64,7 @@
                 <td class="letter" id="D" onclick="checkLetter(3)">D</td>
                 <td class="letter" id="E" onclick="checkLetter(4)">E</td>
             </tr>
-            <tr>
+            <tr id="alphabetLine">
                 <td class="letter" id="F" onclick="checkLetter(5)">F</td>
                 <td class="letter" id="G" onclick="checkLetter(6)">G</td>
                 <td class="letter" id="H" onclick="checkLetter(7)">H</td>
@@ -96,10 +97,10 @@
     </div>
     
       
-    <!-- <div id="divCanvas">
-        <canvas id="canvas" width="500" height="500" style="border:1px solid silver;">Your browser does not support the HTML5 canvas tag.</canvas>  
-    </div> -->
-     
+    <div id="divCanvas">
+        <canvas id="canvas" width="450px" height="450px">Your browser does not support the HTML5 canvas tag.</canvas>  
+    </div>
+    <div><img id="mainimg" src="img/mainImg.png"></div>
   
   </body>
 </html>
