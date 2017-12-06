@@ -1,19 +1,128 @@
-/*hangman.css*/
-.letter {
-    font-size: 20px;
-    color: blue;
-    font-family: sans-serif;
+#header{                                            /* header */
+    width: auto;
+    height: 200px;
+    background-color: #009fbc;
+    margin: 0px auto;
+}
+
+#score{
+    font-family: Hastoler;
+    color:  #f8e6d4;
+    font-size: 64px;
+    font-weight: 200;
+    text-align: right;
+    position: relative;
+    top: -100px;
+    left: -180px;
+}
+
+div.puzzle1{
+    width: 57px;
+    height: 45px;
+    position: relative;
+    left: 510px;
+    top: -35px;
+}
+
+div.puzzle2{
+    width: 66px;
+    height: 45px;
+    position: relative;
+    left: 500px;
+    top: -8px;
+}
+
+
+#guesses{
+    font-family: "Hastoler Regular", Times, serif;
+    color:  #f8e6d4;
+    text-align: left;
+    font-size: 64px;
+    font-weight: 400px;
+    position: relative;
+    top: 55px;
+    left: 36px;                                     /* End of header */
+}
+
+#header_buttom_line{
+    width: auto;
+    height: 13px;
+    background-color: #cd6a02;
+    position: relative;
+    top: -40px;
+}
+
+body{                                                    /* Body */
+    width: 70%;
+	background-color: #f8e6d4;
+	margin: 0 auto;
+}
+
+
+#footer{                                                /* Footer */
+    background-color: #cccccc;
+    width: auto;
+    height: 143px;
+    margin: 0px auto;
+    position: relative;
+    top: 605px;
+}
+
+#gWord{
+	font-family: Hastoler, serif;
+	color: #cd6a02;;
+	font-size: 50px;
+    float: inherit; 
+    text-align: center;
+    font-size: 100px;                                  
+}
+
+div.down{
+    width: 494px;
+    height: 96px;
+    position: relative;
+    left: 100px;
+    top: -240px;
+}                                   
+
+#header_buttom_line2{
+    width: auto;
+    height: 8px;
+    background-color: #cd6a02;
+    position: relative;
+    top: -215px;                                /* End of footer */
+}
+
+
+
+.letter{
+    font-size: 70px;
+    color: #009fbc;
+    font-family: Hastoler, serif;
     cursor: pointer;
 }
 
-.btn {
+#newgame{
     cursor: pointer;
+	background-color: white;
+	width: 200px;
+	height: 60px;
+	font-family: Hastoler, serif;
+	font-size: 50px;
+	color: #009fbc;
+	text-align: center;
+	padding: 5px;
+	margin: 10px auto;
+
 }
 
-#img1 {
-	position: relative;
+
+#alphabet{
+	background-color: #cacccd;
+	width: 405px;
+	height: 415px;
+	margin: 10px 80px auto;
+	float: right;
 }
 
-#img2 {
-	position: relative;
-}
+

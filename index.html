@@ -5,12 +5,15 @@
     <meta charset="utf-8">
     <link type="text/css" href="hangman.css" rel="stylesheet">
     <script src="hangman.js"></script>
+    <title>HANGMAN</title>
   </head>
   
+    
   <body onload="game()"> <!-- vymazanie single page na zaciatku -->
     
+      
       <div id="newgame">
-    <button class="btn" id="btnNewgame" onclick="funNewgame()">NEW GAME</button>
+    <div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
   </div>
       
       <div id="play">
@@ -29,9 +32,27 @@
       <button class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</button>    
     </div>
       
-
-  <div id="guesses"></div>
-  <div id="gWord"></div>
+ <div id="header">      <!-- HEADER -->
+  <div id="guesses"></div> 
+     <div class="puzzle1">  <!-- PICTURE 1 -->
+     <img src="img/puzzle/puzzle_player1.png">
+         </div>
+     <div class="puzzle2"> <!-- PICTURE 2 -->
+    <img src="img/puzzle/puzzle_player2.png" style="width:100%">
+        </div>
+     <div id="score">Score:</div>
+     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
+     </div>
+      
+       
+      
+      <div id="footer">
+     <div id="gWord"></div>
+    <div class="down">  <!-- PICTURE 3 -->
+     <img src="img/down/down.png">
+        </div>
+    <div id="header_buttom_line2"></div>
+      </div>
       
     <div id="alphabet">
         <table width="400px">
@@ -73,11 +94,12 @@
             </tr>
         </table>
     </div>
+    
       
-    <div id="divCanvas">
+    <!-- <div id="divCanvas">
         <canvas id="canvas" width="500" height="500" style="border:1px solid silver;">Your browser does not support the HTML5 canvas tag.</canvas>  
-    </div>
-
+    </div> -->
+     
   
   </body>
 </html>
