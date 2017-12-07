@@ -110,11 +110,13 @@ div.down{
 	text-align: center;
 	padding: 5px;
 	margin: 10px auto;
+	-webkit-transition: background-color 0.5s; /*prechod*/
+    transition: background-color 0.5s; /*prechod*/
 }
 
 #newgame:hover {
-	background-color: #cc6600;
-	color: white;
+	background-color: #cc6600; /*prechod*/
+	color: white; /*prechod*/
 }
 
 .btn{
@@ -128,6 +130,8 @@ div.down{
 	text-align: center;
 	padding: 5px;
 	margin: 10px auto;
+	-webkit-transition: background-color 0.5s; /*prechod*/
+    transition: background-color 0.5s; /*prechod*/
 }
 
 .btn:hover {
@@ -150,6 +154,8 @@ div.down{
 	height: 300px;
 	margin: 10px 80px auto;
 	float: right;
+	-webkit-transition: color 0.5s; /*prechod*/
+    transition: color 0.5s; /*prechod*/
 }
 
 #canvas {
@@ -161,4 +167,10 @@ div.down{
 	width: 90%;
 	height: auto;
 	margin: 0px 50px auto;
+}
+
+#game {
+	height: 0px;
+	-webkit-transition: height .5s; /*prechod*/
+    transition: height .5s; /*prechod*/
 }
