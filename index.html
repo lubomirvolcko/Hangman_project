@@ -11,17 +11,6 @@
     
   <body onload="game()"> <!-- vymazanie single page na zaciatku -->
     <div><img id="logo" src="img/HangmanSovy_logo.svg"></div>
-	<!-- <div id="header">      <!-- HEADER
-  		
-		<div class="puzzle1">  <!-- PICTURE 1
-		<img src="img/puzzle/puzzle_player1.png">
-	</div>
-     <div class="puzzle2"> <!-- PICTURE 2
-    <!-- <img src="img/puzzle/puzzle_player2.png" style="width:100%">
-        </div>
-     
-     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE
-     </div>-->
 	  
       <div id="newgame">
     <div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
@@ -42,18 +31,24 @@
       <div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
       <div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
     </div>
-
+	<div><img id="mainimg" src="img/mainImg.png"></div> 
+	  
+	  <div id="game">
+	  <!-- <div id="header">      <!-- HEADER
+  		
+		<div class="puzzle1">  <!-- PICTURE 1
+		<img src="img/puzzle/puzzle_player1.png">
+	</div>
+     <div class="puzzle2"> <!-- PICTURE 2
+    <!-- <img src="img/puzzle/puzzle_player2.png" style="width:100%">
+        </div>
+     
+     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE
+     </div>-->
+	  
       <div id="guesses"></div> 
       <div id="score">Score:</div>
       <div id="gWord"></div>
-      
-	  <!--<div id="footer">
-     <div id="gWord"></div>
-    <div class="down">  <!-- PICTURE 3 
-     <img src="img/down/down.png">
-        </div>
-    <div id="header_buttom_line2"></div>
-      </div> -->
       
     <div id="alphabet">
         <table width="380px">
@@ -94,13 +89,20 @@
                 <td class="letter" id="Z" onclick="checkLetter(25)">Z</td>
             </tr>
         </table>
-    </div>
-    
+    </div>    
       
-    <div id="divCanvas">
-        <canvas id="canvas" width="450px" height="450px">Your browser does not support the HTML5 canvas tag.</canvas>  
+    <div id="canvas">
+         <img id="imgMistake" src="img/mistakes/mistake0.png">
     </div>
-    <div><img id="mainimg" src="img/mainImg.png"></div>
+	  
+     <!--<div id="footer">
+     <div id="gWord"></div>
+    <div class="down">  <!-- PICTURE 3 
+     <img src="img/down/down.png">
+        </div>
+    <div id="header_buttom_line2"></div>
+      </div> --> 
+	</div>
   
   </body>
 </html>

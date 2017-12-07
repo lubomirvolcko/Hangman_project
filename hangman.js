@@ -61,32 +61,7 @@ function funCategory(value){ //set visible/unvisible div in html
 
 function checkLetter(value) { //function for chcecking pressed letter
     
-	/*c = document.getElementById('canvas');                      //define for canvas
-    var ctx = c.getContext("2d");                               //define for canvas
-	var img0 = document.createElement("IMG");
-	img0.setAttribute("src", "mistake0.png");
-	var cimg0 = ctx.drawImage(img0,10,440);
-	var img1 = document.createElement("IMG");
-	img1.setAttribute("src", "mistake1.png");
-	var cimg1 = ctx.drawImage(img1,85,10);
-	var img2 = document.createElement("IMG");
-	img2.setAttribute("src", "mistake2.png");
-	var img3 = document.createElement("IMG");
-	img3.setAttribute("src", "mistake3.png");
-	var img4 = document.createElement("IMG");
-	img4.setAttribute("src", "mistake4.png");
-	var img5 = document.createElement("IMG");
-	img5.setAttribute("src", "mistake5.png");
-	var img6 = document.createElement("IMG");
-	img6.setAttribute("src", "mistake6.png");
-	var img7 = document.createElement("IMG");
-	img7.setAttribute("src", "mistake7.png");
-	var img8 = document.createElement("IMG");
-	img8.setAttribute("src", "mistake8.png");
-	var img9 = document.createElement("IMG");
-	img9.setAttribute("src", "mistake9.png");
-	var img10 = document.createElement("IMG");
-	img10.setAttribute("src", "mistake10.png");*/
+	
 	var letter = alphabet[value]; //save pressed letter to var letter
 	
         for(var i=0;i<word.length;i++)    //browse word length
@@ -94,10 +69,11 @@ function checkLetter(value) { //function for chcecking pressed letter
             if(word[i]==letter && (lives>0 && checkScore!=score) && checkWord!=word.length)          //compare insert letter from user with guessed word
             {
                 answerArray[i]=letter;	//if guessed letter is correct insert it to position
+				//document.getElementById('gWord').setAttribute("style", "color: #009fbc");
 				checkWord=checkWord+1;	//if guessed letter is correct add 1 to checkWord
 				score+=10;
 				if((lives>0 && checkScore!=score) || checkWord!=word.length)
-					{
+					{	
 						document.getElementById('score').innerHTML = "Score: "+score;
 					}				
             }
@@ -107,6 +83,20 @@ function checkLetter(value) { //function for chcecking pressed letter
       if (j == -1 && (lives>0 && checkScore!=score) && checkWord!=word.length) {
 		  lives -= 1;
 		  console.log("lives: "+lives);
+		  switch(lives)
+		  {
+			  	case 9: document.getElementById('imgMistake').src="img/mistakes/mistake1.png";break;
+				case 8: document.getElementById('imgMistake').src="img/mistakes/mistake2.png";break;
+				case 7: document.getElementById('imgMistake').src="img/mistakes/mistake3.png";break;
+				case 6: document.getElementById('imgMistake').src="img/mistakes/mistake4.png";break;
+				case 5: document.getElementById('imgMistake').src="img/mistakes/mistake5.png";break;
+				case 4: document.getElementById('imgMistake').src="img/mistakes/mistake6.png";break;
+			  	case 3: document.getElementById('imgMistake').src="img/mistakes/mistake7.png";break;
+				case 2: document.getElementById('imgMistake').src="img/mistakes/mistake8.png";break;
+				case 1: document.getElementById('imgMistake').src="img/mistakes/mistake9.png";break;
+				case 0: document.getElementById('imgMistake').src="img/mistakes/mistake10.png";break;
+		  }
+		  console.log("IMG: mistake"+i);
 		  if(score>=5 && (lives>0 && checkScore!=score) && checkWord!=word.length)
 			  {
 				 	score-=5; 
