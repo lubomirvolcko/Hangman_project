@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
     <link type="text/css" href="hangman.css" rel="stylesheet">
     <script src="hangman.js"></script>
-    <title>HANGMAN</title>
-  </head>
+	<title>HANGMAN</title>
+</head>
   
     
-  <body onload="game()"> <!-- vymazanie single page na zaciatku -->
-    <div><img id="logo" src="img/HangmanSovy_logo.svg"></div>
+<body onload="game()"> <!-- ### BODY ### -->
+    
+	<div><img id="logo" src="img/HangmanSovy_logo.svg"></div> <!-- LOGO on entrypage -->
 	  
-      <div id="newgame">
-    <div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
-  </div>
+	<div id="newgame"> <!-- BUTTON newgame -->
+		<div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
+	</div>
       
-      <div id="play">
-    <div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
-  </div>
+	<div id="play"> <!-- BUTTON play -->
+		<div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
+	</div>
 
-  <div id="difficulity"> 
+	<div id="difficulity"> <!-- DIFFICULITY -->
         <div class="text">Choose a difficulity:</div>
-                    <div class="btn" id="btnEasy" value="0" onclick="funDifficulity(0)">Easy</div>
-                    <div class="btn" id="btnHard" value="1" onclick="funDifficulity(1)">Hard</div>
-                </div>
+ 		<div class="btn" id="btnEasy" value="0" onclick="funDifficulity(0)">Easy</div>
+		<div class="btn" id="btnHard" value="1" onclick="funDifficulity(1)">Hard</div>
+	</div>
 
-  <div id="category"> 
-    <div class="text">Choose a category:</div>
-      <div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
-      <div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
+	<div id="category"> <!-- CATEGORY -->
+		<div class="text">Choose a category:</div>
+		<div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
+		<div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
     </div>
-	<div><img id="mainimg" src="img/mainImg.png"></div> 
+	
+	<div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
 	  
-	  <div id="game">
+	<div id="game">
 	  <!-- <div id="header">      <!-- HEADER
   		
 		<div class="puzzle1">  <!-- PICTURE 1
@@ -46,11 +48,11 @@
      <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE
      </div>-->
 	  
-      <div id="guesses"></div> 
-      <div id="score">Score:</div>
-      <div id="gWord"></div>
+	<div id="lives"></div> <!-- LIVES -->
+	<div id="score">Score:</div> <!-- SCORE -->
+	<div id="gWord"></div> <!-- GUESSING WORD -->
       
-    <div id="alphabet">
+    <div id="alphabet"> <!-- TABLE OF ALPHABET -->
         <table width="380px">
             <tr>
                 <td class="letter" id="A" onclick="checkLetter(0)">A</td>
@@ -89,9 +91,9 @@
                 <td class="letter" id="Z" onclick="checkLetter(25)">Z</td>
             </tr>
         </table>
-    </div>    
+    </div> <!-- TABLE OF ALPHABET -->
       
-    <div id="canvas">
+    <div id="divMistake"> <!-- DIV images of MISTAKES -->
          <img id="imgMistake" src="img/mistakes/mistake0.png">
     </div>
 	  
@@ -104,5 +106,5 @@
       </div> --> 
 	</div>
   
-  </body>
+  </body> <!-- ### BODY ### -->
 </html>
