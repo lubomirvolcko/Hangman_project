@@ -37,7 +37,7 @@ function funNewgame(){ //set visible/unvisible div in html
 	document.getElementById('divMistake').style.display = "none"; //DIV mistakes
 	document.getElementById('logo').style.display = "visible"; //IMG logo
     checkNewgame++; //for finding if was pressed new game
-} 
+} /* ### END OF FUNCTION funNewgame ### */ 
 
 function funDifficulity(value){ //set visible/unvisible div in html
     document.getElementById('play').style.display = "none"; //BUTTON play
@@ -49,7 +49,7 @@ function funDifficulity(value){ //set visible/unvisible div in html
 	document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameDiff = value; //saveing choosen difficulity to var gameDiff
     console.log("Difficulity: "+gameDiff+" (0-easy; 1-hard;)"); //print to console chosen difficulity
-}
+} /* ### END OF FUNCTION funDifficulity ### */
 
 function funCategory(value){ //set visible/unvisible div in html
     document.getElementById('play').style.display = "block"; //BUTTON play
@@ -61,7 +61,7 @@ function funCategory(value){ //set visible/unvisible div in html
 	document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameCat = value; //saveing choosen category to var gameCat
     console.log("Category: "+gameCat+" (0-animals; 1-cities;)"); //print to console chosen category
-}
+} /* ### END OF FUNCTION funCategory ### */
 
 function checkLetter(value) { //function for chcecking pressed letter
     
@@ -133,7 +133,7 @@ function checkLetter(value) { //function for chcecking pressed letter
     		document.getElementById(alphabet[g]).style.visibility = "hidden"; //hide letter after click
 		}	  
 
-        } /* ### END OF FUNCTION checkLetter ###*/
+        } /* ### END OF FUNCTION checkLetter ### */
 
 function game () { //function for game
         
