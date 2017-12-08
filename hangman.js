@@ -38,6 +38,7 @@ function funNewgame(){ //set visible/unvisible div in html
 	document.getElementById('logo').style.display = "visible"; //IMG logo
     document.getElementById('header').style.display = "none";
     document.getElementById('footer').style.display = "none";
+    document.getElementById('hint').style.display = "none";
     checkNewgame++; //for finding if was pressed new game
 } /* ### END OF FUNCTION funNewgame ### */ 
 
@@ -137,6 +138,15 @@ function checkLetter(value) { //function for chcecking pressed letter
 
         } /* ### END OF FUNCTION checkLetter ### */
 
+/*function funHint () {
+    document.getElementById('btnHint').innerHTML = "HINT "+function;        //function HINT
+}*/
+
+
+
+
+
+
 function game () { //function for game
         
         document.getElementById('play').style.display = "none"; //BUTTON play
@@ -144,6 +154,7 @@ function game () { //function for game
         document.getElementById('category').style.display = "none"; //DIV category
         document.getElementById('header').style.display = "none"; //Header
         document.getElementById('footer').style.display = "none"; //Footer
+        document.getElementById('hint').style.display = "none";
 
         if(checkNewgame==0) //if WASN'T pressed button newgame
            {
@@ -163,6 +174,7 @@ function game () { //function for game
 			document.getElementById('score').innerHTML = "Score: "+score; //print score
             document.getElementById('header').style.display = "block"; //Header
             document.getElementById('footer').style.display = "block"; //Footer
+            document.getElementById('hint').style.display = "block";
             }
         if(gameDiff==0) //if was choosen difficulity easy
           {
