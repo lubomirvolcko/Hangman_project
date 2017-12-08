@@ -16,20 +16,6 @@
     margin: 0px 500px auto;
 }
 
-puzzle1{
-    width: 57px;
-    height: 45px;
-    position: relative;
-    margin: 50px 500px auto;
-}
-
-puzzle2{
-    width: 66px;
-    height: 45px;
-    position: relative;
-    left: 500px;
-    top: -8px;
-}
 
 /* div lives */
 #lives{
@@ -75,15 +61,7 @@ body{                                                    /* Body */
     float: inherit; 
     text-align: center;
     font-size: 100px;                                  
-}
-
-div.down{
-    width: 494px;
-    height: 96px;
-    position: relative;
-    left: 100px;
-    top: -240px;
-}                                   
+}                             
 
 #header_buttom_line2{
     width: auto;

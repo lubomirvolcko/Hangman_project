@@ -36,6 +36,8 @@ function funNewgame(){ //set visible/unvisible div in html
     document.getElementById('alphabet').style.display = "none"; //DIV alphabet
 	document.getElementById('divMistake').style.display = "none"; //DIV mistakes
 	document.getElementById('logo').style.display = "visible"; //IMG logo
+    document.getElementById('header').style.display = "none";
+    document.getElementById('footer').style.display = "none";
     checkNewgame++; //for finding if was pressed new game
 } /* ### END OF FUNCTION funNewgame ### */ 
 
@@ -140,6 +142,9 @@ function game () { //function for game
         document.getElementById('play').style.display = "none"; //BUTTON play
         document.getElementById('difficulity').style.display = "none"; //DIV difficility
         document.getElementById('category').style.display = "none"; //DIV category
+        document.getElementById('header').style.display = "none"; //Header
+        document.getElementById('footer').style.display = "none"; //Footer
+
         if(checkNewgame==0) //if WASN'T pressed button newgame
            {
             document.getElementById('alphabet').style.display = "none"; //DIV alphabet 
@@ -155,7 +160,9 @@ function game () { //function for game
 			document.getElementById("lives").style.display = "block"; //DIV lives
 			document.getElementById("lives").innerHTML="Lives: "+lives; //print lives
 			document.getElementById('score').style.display = "block"; //DIV score
-				document.getElementById('score').innerHTML = "Score: "+score; //print score
+			document.getElementById('score').innerHTML = "Score: "+score; //print score
+            document.getElementById('header').style.display = "block"; //Header
+            document.getElementById('footer').style.display = "block"; //Footer
             }
         if(gameDiff==0) //if was choosen difficulity easy
           {
