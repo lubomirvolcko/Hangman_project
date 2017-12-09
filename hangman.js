@@ -1,10 +1,28 @@
 /* ##### START OF VARS #### */
 var random = 0;                                               //defined for generating word
 var word = "";                                                //defined for choesen word from random
-var easyAnimals = ["CAT", "MOUSE", "HORSE", "DOG", "LION"];   //defined field of animals
-var easyCities = ["BRATISLAVA", "PARIS", "DUBAI", "PRAGUE"];  //defined field of cities
-var hardAnimals = ["CROCODILE", "FISH", "TIGER", "SNAKE"];    //defined field of animals
-var hardCities = ["BERLIN", "VIENNA", "REYKJAVIK"];         //defined field of cities
+var easyAnimals = ["CAT", "MOUSE", "HORSE", "DOG", "LION","WORM","FOX","SWAN","FROG","BEAR",
+"PIG","ZEBRA","ELEPHANT","TIGER","PANTHER","BIRD","HAMSTER","MOUSE","DUCK","PENGUIN","CHICKEN",
+"COW","SHEEP","GOAT","FISH","RAT","BUTTERFLY","BEE","SCORPION","SPIDER","FLY","BUNNY","",
+"TURTLE","JELLYFISH","SHARK","DOLPHIN","SNAIL","SNAKE","CENTIPEDE","MONKEY","DEER","BEAVER",
+"CROCODILE","CAMEL","SEAL","GIRAFFE","EAGLE","FERRET","KANGAROO","OSTRICH","BISON","COALA"
+,"PANDA"];   //defined field of animals
+var easyCities = ["BRATISLAVA", "PARIS", "PRAGUE","SALZBURG","VENICE","DUBAI","ChARLESTON",
+"BRUGES","KRAKOW","BEIRUT","LISBON","SYDNEY","BANGKOK","AMSTERDAM","ROME","ISTANBUL",
+"BERLIN","CAPE","FLORENCE","MARRAKECH","PETERSBURG","BUDAPEST","LONDON","PARIS","TOKYO","BANGKOK",
+"KOSICE","VIENNA","INNSBRUCK","LINZ","OSLO","MONTREAL","LISABON","MOSKVA","MISKOLC","BRNO","DUBLIN",
+"DHAKA","DALLAS","KRAKOW","PRESOV","GRAZ","LONDON","TRNAVA","STOCKHOLM","SINGAPORE","BALI","BOSTON",
+"HAMBURG","VARSAVA","MIAMI","HONGKONG","SYDNEY","BRUSSELS","CARTAGENA","HOLLYWOOD","DELHI"];  //defined field of cities
+var hardAnimals = ["AARDVARK","BABOON", "SEAL","FALCON","PENGUIN","CRAB","SPITZ","GERBIL",
+"PINSCHER","GHARIAL","CATTLE","HIMALAYAN","YAK","ZEBU","WOODPECKER","WOLVERINE","RHINOCEROS","CAPUCHIN",
+"WHIPPET","WASP","WALRUS","SWAN","UAKARI","UGUISU","VULTURE","STOAT","LIONFISH","GECKO","LADYBIRD",
+"KAKAPO","KUDU","INDRI","IMPALA","JACKAL","INDRI","IBIS","GROUSE","GOPHER","HIPPOPOTAMUS",
+"HERON","HAVANESE","GAR","TAMARIN"];    //defined field of animals
+var hardCities = ["BELMOPAN", "BIŠKEK", "BRIDGETOWN","BUJUMBURA","CARACAS","COTONOU","DAUHA","DODOMA",
+"FREETOWN","GABORONE","CHARTUM","ISLAMABAD","JAMESTOWN","JEREVAN","KAMPALA","KATHMANDU","KIGALI","KINGSTON",
+"KONAKRY","KOROR","LIBREVILLE","LOME","LUSAKA","MAMOUDZOU","MANAGUA","MASKAT","MONTEVIDEO","MORONI","NAIROBI",
+"NASSAU","NIAMEY","NUUK","OUAGADOUGOU","PALIKIR","PARAMARIBO","PRAIA","QUITO","RABAT","SANA","SKOPJE","SANTIAGO",
+"STANLEY","SUVA","THIMPHU"];     //defined field of cities 
 var gameDiff;                                               //defined for chosen difficulity
 var gameCat;                                                //defined for chosen category
 var alphabet = ['A', 'B', 'C', 'D', 'E',
@@ -12,7 +30,7 @@ var alphabet = ['A', 'B', 'C', 'D', 'E',
                 'K', 'L', 'M', 'N', 'O', 
                 'P', 'Q', 'R', 'S', 'T', 
                 'U', 'V', 'W', 'X', 'Y', 'Z'];                                     //defined field of alphabet
-var play = document.getElementById('play');                 //defined div play
+var play = document.getElementById('play');                 //defined div p,
 var btnPlay = document.getElementById('btnPlay');           //defined button play
 var difficulity = document.getElementById('difficulity');   //defined div difficulity
 var btnEasy = document.getElementById('btnEasy');           //defined button easy
@@ -182,28 +200,26 @@ function game () { //function for game
             document.getElementById('reset').style.display = "block";
             }
         if(gameDiff==0) //if was choosen difficulity easy
-             { document.getElementById("difshowdurgam").innerHTML="Difficulty: Easy"
+          {
               if(gameCat==0) //if was choosen category animals
                 {
                     random = Math.floor(Math.random()*easyAnimals.length); //generate random  word from field easyAnimals
                     word = easyAnimals[random]; //save random word from field easyAnimals to var word
-                    document.getElementById("catshowdurgam").innerHTML="Category: Animals";
                 }else if(gameCat==1) //if was choosen category cities
                 {
                     random = Math.floor(Math.random()*easyCities.length); //generate random  word from field easyCities 
                     word = easyCities[random]; //save random word from field easyCities to var word
-                    document.getElementById("catshowdurgam").innerHTML="Category: Cities";
                 }
               
           }else if(gameDiff==1) //if was choosen difficulity hard
-              {document.getElementById("difshowdurgam").innerHTML="Difficulty: Hard"
+              {
                   if(gameCat==0) //if was choosen category animals
-                    {document.getElementById("catshowdurgam").innerHTML="Category: Animals";
+                    {
                         random = Math.floor(Math.random()*hardAnimals.length); //generate random  word from field hardAnimals 
                         word = hardAnimals[random]; //save random word from field hardAnimals to var word
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
                     }else if(gameCat==1) //if was choosen category cities
-                    {document.getElementById("catshowdurgam").innerHTML="Category: Cities";
+                    {
                         random = Math.floor(Math.random()*hardCities.length);  //generate random  word from field hardCities  
                         word = hardCities[random]; //save random word from field easyCities to var word
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
@@ -220,7 +236,5 @@ function game () { //function for game
            }
            var s=answerArray.join(" "); //insert between underlines space
            document.getElementById("gWord").innerHTML= s; //write on screen underlines 
-
-
 	
 } /* ### END OF FUNCTION game ###*/
