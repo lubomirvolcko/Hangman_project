@@ -39,6 +39,7 @@ function funNewgame(){ //set visible/unvisible div in html
     document.getElementById('header').style.display = "none";
     document.getElementById('footer').style.display = "none";
     document.getElementById('hint').style.display = "none";
+    document.getElementById('reset').style.display = "none";
     checkNewgame++; //for finding if was pressed new game
 } /* ### END OF FUNCTION funNewgame ### */ 
 
@@ -52,6 +53,7 @@ function funDifficulity(value){ //set visible/unvisible div in html
 	document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameDiff = value; //saveing choosen difficulity to var gameDiff
     console.log("Difficulity: "+gameDiff+" (0-easy; 1-hard;)"); //print to console chosen difficulity
+     document.getElementById('reset').style.display = "none";
 } /* ### END OF FUNCTION funDifficulity ### */
 
 function funCategory(value){ //set visible/unvisible div in html
@@ -64,6 +66,7 @@ function funCategory(value){ //set visible/unvisible div in html
 	document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameCat = value; //saveing choosen category to var gameCat
     console.log("Category: "+gameCat+" (0-animals; 1-cities;)"); //print to console chosen category
+     document.getElementById('reset').style.display = "none";
 } /* ### END OF FUNCTION funCategory ### */
 
 function checkLetter(value) { //function for chcecking pressed letter
@@ -162,6 +165,7 @@ function game () { //function for game
 			document.getElementById('divMistake').style.display = "none"; //DIV mistakes
 			document.getElementById("lives").style.display = "none"; //DIV lives
 			document.getElementById('score').style.display = "none"; //DIV score
+             document.getElementById('reset').style.display = "none";
            }else if(checkNewgame>0) //if WAS pressed button newgame
            {
 			document.getElementById('logo').style.display = "none"; //IMG logo
@@ -175,6 +179,7 @@ function game () { //function for game
             document.getElementById('header').style.display = "block"; //Header
             document.getElementById('footer').style.display = "block"; //Footer
             document.getElementById('hint').style.display = "block";
+            document.getElementById('reset').style.display = "block";
             }
         if(gameDiff==0) //if was choosen difficulity easy
           {

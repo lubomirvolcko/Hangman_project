@@ -155,3 +155,23 @@ body{                                                    /* Body */
 	height: auto;
 	margin: 0px 50px auto;
 }
+
+#reset{
+    cursor: pointer;
+    background-color: white;
+    width: 200px;
+    height: 60px;
+    font-family: Hastoler, serif;
+    font-size: 50px;
+    color: #009fbc;
+    text-align: center;
+    padding: 5px;
+    margin: 10px auto;
+    -webkit-transition: background-color 0.5s; /*prechod*/
+    transition: background-color 0.5s; /*prechod*/
+}
+/* action of reset button when is cursor on it */
+#reset:hover {
+    background-color: #cc6600; /*prechod*/
+    color: white; /*prechod*/
+}
