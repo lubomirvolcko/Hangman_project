@@ -182,26 +182,28 @@ function game () { //function for game
             document.getElementById('reset').style.display = "block";
             }
         if(gameDiff==0) //if was choosen difficulity easy
-          {
+             { document.getElementById("difshowdurgam").innerHTML="Difficulty: Easy"
               if(gameCat==0) //if was choosen category animals
                 {
                     random = Math.floor(Math.random()*easyAnimals.length); //generate random  word from field easyAnimals
                     word = easyAnimals[random]; //save random word from field easyAnimals to var word
+                    document.getElementById("catshowdurgam").innerHTML="Category: Animals";
                 }else if(gameCat==1) //if was choosen category cities
                 {
                     random = Math.floor(Math.random()*easyCities.length); //generate random  word from field easyCities 
                     word = easyCities[random]; //save random word from field easyCities to var word
+                    document.getElementById("catshowdurgam").innerHTML="Category: Cities";
                 }
               
           }else if(gameDiff==1) //if was choosen difficulity hard
-              {
+              {document.getElementById("difshowdurgam").innerHTML="Difficulty: Hard"
                   if(gameCat==0) //if was choosen category animals
-                    {
+                    {document.getElementById("catshowdurgam").innerHTML="Category: Animals";
                         random = Math.floor(Math.random()*hardAnimals.length); //generate random  word from field hardAnimals 
                         word = hardAnimals[random]; //save random word from field hardAnimals to var word
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
                     }else if(gameCat==1) //if was choosen category cities
-                    {
+                    {document.getElementById("catshowdurgam").innerHTML="Category: Cities";
                         random = Math.floor(Math.random()*hardCities.length);  //generate random  word from field hardCities  
                         word = hardCities[random]; //save random word from field easyCities to var word
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
@@ -218,5 +220,7 @@ function game () { //function for game
            }
            var s=answerArray.join(" "); //insert between underlines space
            document.getElementById("gWord").innerHTML= s; //write on screen underlines 
+
+
 	
 } /* ### END OF FUNCTION game ###*/

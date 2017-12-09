@@ -175,3 +175,25 @@ body{                                                    /* Body */
     background-color: #cc6600; /*prechod*/
     color: white; /*prechod*/
 }
+
+#difshowdurgam{            /*design for difficulty text*/
+    font-family: "Hastoler Regular", Times, serif;
+    color: #009fbc;
+    text-align: left;
+    font-size: 34px;
+    font-weight: 200px;
+    position: relative;
+    top: 55px;
+    left: 36px;    
+    }                                 
+
+#catshowdurgam{                      /*design for category text*/
+    font-family: "Hastoler Regular", Times, serif;
+    color: #009fbc;
+    text-align: left;
+    font-size: 34px;
+    font-weight: 200px;
+    position: relative;
+    top: 55px;
+    left: 36px;                                     
+}
