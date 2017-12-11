@@ -58,6 +58,7 @@ function funNewgame(){ //set visible/unvisible div in html
     document.getElementById('footer').style.display = "none";
     document.getElementById('hint').style.display = "none";
     document.getElementById('reset').style.display = "none";
+    document.getElementById('reeset').style.display = "block";
     checkNewgame++; //for finding if was pressed new game
 } /* ### END OF FUNCTION funNewgame ### */ 
 
@@ -72,6 +73,7 @@ function funDifficulity(value){ //set visible/unvisible div in html
     gameDiff = value; //saveing choosen difficulity to var gameDiff
     console.log("Difficulity: "+gameDiff+" (0-easy; 1-hard;)"); //print to console chosen difficulity
      document.getElementById('reset').style.display = "none";
+     document.getElementById('reeset').style.display = "none";
 } /* ### END OF FUNCTION funDifficulity ### */
 
 function funCategory(value){ //set visible/unvisible div in html
@@ -85,6 +87,7 @@ function funCategory(value){ //set visible/unvisible div in html
     gameCat = value; //saveing choosen category to var gameCat
     console.log("Category: "+gameCat+" (0-animals; 1-cities;)"); //print to console chosen category
      document.getElementById('reset').style.display = "none";
+     document.getElementById('reeset').style.display = "none";
 } /* ### END OF FUNCTION funCategory ### */
 
 function checkLetter(value) { //function for chcecking pressed letter
@@ -161,34 +164,34 @@ function checkLetter(value) { //function for chcecking pressed letter
 
 
 var checkBtnHint = 1;
-	document.getElementById('btnHint').style.display = "none";
-	if(checkBtnHint==1)
-		{
-			if(gameDiff==0) //if was choosen difficulity easy
-             { 				 
-              	if(gameCat==0) //if was choosen category animals
+    document.getElementById('btnHint').style.display = "none";
+    if(checkBtnHint==1)
+        {
+            if(gameDiff==0) //if was choosen difficulity easy
+             {               
+                if(gameCat==0) //if was choosen category animals
                 {
                 document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyAnimals[random];
-				}
-				else if(gameCat==1) //if was choosen category cities
+                }
+                else if(gameCat==1) //if was choosen category cities
                 {
                 document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyCities[random];   
                 }
               
-          	}
-			else if(gameDiff==1) //if was choosen difficulity hard
+            }
+            else if(gameDiff==1) //if was choosen difficulity hard
             {
-				  
-            	if(gameCat==0) //if was choosen category animals
+                  
+                if(gameCat==0) //if was choosen category animals
                 {
-				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardAnimals[random];		
+                document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardAnimals[random];       
                 }
-				else if(gameCat==1) //if was choosen category cities
+                else if(gameCat==1) //if was choosen category cities
                 {
-				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];		
+                document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];        
                 }
               }
-		}
+        }
 
 
 
@@ -212,6 +215,7 @@ function game () { //function for game
             document.getElementById("lives").style.display = "none"; //DIV lives
             document.getElementById('score').style.display = "none"; //DIV score
              document.getElementById('reset').style.display = "none";
+             document.getElementById('reeset').style.display = "none";
            }else if(checkNewgame>0) //if WAS pressed button newgame
            {
             document.getElementById('logo').style.display = "none"; //IMG logo
@@ -226,36 +230,46 @@ function game () { //function for game
             document.getElementById('footer').style.display = "block"; //Footer
             document.getElementById('hint').style.display = "block";
             document.getElementById('reset').style.display = "block";
+            document.getElementById('reeset').style.display = "block";
             document.getElementById('header_buttom_line').style.display = "block";
-            document.getElementById('hangman_logo').style.display = "block";   
+            document.getElementById('hangman_logo').style.display = "block";
             }
         if(gameDiff==0) //if was choosen difficulity easy
              { document.getElementById("difshowdurgam").innerHTML="Difficulty: Easy"
+
               if(gameCat==0) //if was choosen category animals
-                {
+                {    
                     random = Math.floor(Math.random()*easyAnimals.length); //generate random  word from field easyAnimals
                     word = easyAnimals[random]; //save random word from field easyAnimals to var word
                     document.getElementById("catshowdurgam").innerHTML="Category: Animals";
+                    document.getElementById('reeset').style.display = "visible";
+
                 }else if(gameCat==1) //if was choosen category cities
-                {
+                {   
                     random = Math.floor(Math.random()*easyCities.length); //generate random  word from field easyCities 
                     word = easyCities[random]; //save random word from field easyCities to var word
                     document.getElementById("catshowdurgam").innerHTML="Category: Cities";
+                    document.getElementById('reeset').style.display = "visible";
                 }
               
           }else if(gameDiff==1) //if was choosen difficulity hard
               {document.getElementById("difshowdurgam").innerHTML="Difficulty: Hard"
                   if(gameCat==0) //if was choosen category animals
-                    {document.getElementById("catshowdurgam").innerHTML="Category: Animals";
+                    { 
+                        document.getElementById("catshowdurgam").innerHTML="Category: Animals";
                         random = Math.floor(Math.random()*hardAnimals.length); //generate random  word from field hardAnimals 
                         word = hardAnimals[random]; //save random word from field hardAnimals to var word
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
+                        document.getElementById('reeset').style.display = "visible"; // Play again
+
                     }else if(gameCat==1) //if was choosen category cities
-                    {document.getElementById("catshowdurgam").innerHTML="Category: Cities";
+                    {   
+                        document.getElementById("catshowdurgam").innerHTML="Category: Cities";
                         random = Math.floor(Math.random()*hardCities.length);  //generate random  word from field hardCities  
                         word = hardCities[random]; //save random word from field easyCities to var word
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
-                    }
+                        document.getElementById('reeset').style.display = "visible"; // play again
+                        }
               }
         
             console.log(word); //get to console random generated word
@@ -263,12 +277,19 @@ function game () { //function for game
             
            for(var i = 0; i<word.length;i++)  //browse word length
            {
-            answerArray[i]="_";               //write underlines exact position
+            answerArray[i]="<span style='color:#cd6a02;'>_</span>";
+                         //write underlines exact position
 
            }
            var s=answerArray.join(" "); //insert between underlines space
            document.getElementById("gWord").innerHTML= s; //write on screen underlines 
 
 
+ document.getElementById('reeset').onclick = function() {
+
+
+game()
+
+}
     
 } /* ### END OF FUNCTION game ###*/

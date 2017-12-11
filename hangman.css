@@ -86,7 +86,7 @@ body{
 
 /* div guess word */
 #gWord{
-	color: #cd6a02;;
+	color:blue;              /*#cd6a02*/
 	font-size: 50px;
     float: inherit; 
     text-align: center;
