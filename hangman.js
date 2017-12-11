@@ -159,10 +159,36 @@ function checkLetter(value) { //function for chcecking pressed letter
 
         } /* ### END OF FUNCTION checkLetter ### */
 
-/*function funHint () {
-    document.getElementById('btnHint').innerHTML = "HINT "+function;        //function HINT
-}*/
 
+var checkBtnHint = 1;
+	document.getElementById('btnHint').style.display = "none";
+	if(checkBtnHint==1)
+		{
+			if(gameDiff==0) //if was choosen difficulity easy
+             { 				 
+              	if(gameCat==0) //if was choosen category animals
+                {
+                document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyAnimals[random];
+				}
+				else if(gameCat==1) //if was choosen category cities
+                {
+                document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyCities[random];   
+                }
+              
+          	}
+			else if(gameDiff==1) //if was choosen difficulity hard
+            {
+				  
+            	if(gameCat==0) //if was choosen category animals
+                {
+				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardAnimals[random];		
+                }
+				else if(gameCat==1) //if was choosen category cities
+                {
+				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];		
+                }
+              }
+		}
 
 
 
@@ -176,6 +202,8 @@ function game () { //function for game
         document.getElementById('header').style.display = "none"; //Header
         document.getElementById('footer').style.display = "none"; //Footer
         document.getElementById('hint').style.display = "none";
+        document.getElementById('header_buttom_line').style.display = "none";
+        document.getElementById('hangman_logo').style.display = "none";  
 
         if(checkNewgame==0) //if WASN'T pressed button newgame
            {
@@ -198,6 +226,8 @@ function game () { //function for game
             document.getElementById('footer').style.display = "block"; //Footer
             document.getElementById('hint').style.display = "block";
             document.getElementById('reset').style.display = "block";
+            document.getElementById('header_buttom_line').style.display = "block";
+            document.getElementById('hangman_logo').style.display = "block";   
             }
         if(gameDiff==0) //if was choosen difficulity easy
              { document.getElementById("difshowdurgam").innerHTML="Difficulty: Easy"

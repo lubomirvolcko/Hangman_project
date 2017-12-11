@@ -36,16 +36,17 @@
 	<div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
 	  
 	<div id="game">
-	  <div id="header">      <!-- HEADER -->
-  		
-     
-     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
-     </div>
 	  
+    <div id="header"></div>     <!-- HEADER -->
+    <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
+	<div id="hangman_logo"><img src="img/logo.png"></div>  <!-- Hangman logo -->
 	<div id="lives"></div> <!-- LIVES -->
 	<div id="score">Score:</div> <!-- SCORE -->
-	<div id="gWord"></div> <!-- GUESSING WORD -->
-    <div id="reset"onClick="location.href=location.href">RESET</div> <!--BUTTON FOR RESET GAME-->
+    <div id="rrBtn"><img src="img//buttons/btn_reset_2.png"></div>
+    <div id="againBtn"><img src="img/buttons/btn_ppplayagain_2.png"></div>
+        
+
+    <div id="reset"onClick="location.href=location.href"><div id="rrTxt">reset</div></div> <!--BUTTON FOR RESET GAME-->
 
       
     <div id="alphabet"> <!-- TABLE OF ALPHABET -->
@@ -96,17 +97,17 @@
          <img id="imgMistake" src="img/mistakes/mistake0.png">
     </div>
 	  
-    <div id="hint">
-        <div id="btnHint" onclick="funHint()">HINT</div>
-    </div>
-
-
-     <div id="footer">
+   
+        
+     <div id="footer">  <!-- footer & button line -->
      <div id="gWord"></div>
-        </div>
-    <div id="header_buttom_line2"></div>
+    <div id="header_buttom_line2"></div> 
+          <div id="hint">
+     <div id="btnHint" onclick="funHint()"><div id="hintText">HINT:</div></div> <!-- Button Hint -->
+     <div id="hintSentence"></div>
+         </div>
       </div> 
 	</div>
-  
+    
   </body> <!-- ### BODY ### -->
 </html>
