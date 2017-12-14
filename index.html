@@ -9,110 +9,105 @@
 </head>
   
     
-<body onload="game()" id="body" class="row"> <!-- ### BODY ### -->
-	<div id="divLogo" class="col-12 logo"><img id="logo" src="img/HangmanSovy_logo.svg"></div> <!-- LOGO on entrypage -->
-	<div id="divNewgame" class="col-12">
+<body onload="game()"> <!-- ### BODY ### -->
+    
+	<div><img id="logo" src="img/HangmanSovy_logo.svg"></div> <!-- LOGO on entrypage -->
+	  
 	<div id="newgame"> <!-- BUTTON newgame -->
 		<div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
 	</div>
-    </div> 
-    <div id="divPlay" class="col-12">
+      
 	<div id="play"> <!-- BUTTON play -->
-		<div class="button" id="btnPlay" onclick="game()">PLAY!</div>
+		<div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
 	</div>
-    </div>
-	<div id="difficulity" class="col-12"> <!-- DIFFICULITY -->
-        <div class="text">Choose a difficulity:</div>
- 		<div class="button" id="btnEasy" onclick="funDifficulity(0)">Easy</div>
-		<div class="button" id="btnHard" onclick="funDifficulity(1)">Hard</div>
-	</div>
-    
-	<div id="category" class="col-12"> <!-- CATEGORY -->
-		<div class="text">Choose a category:</div>
-		<div class="button" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
-		<div class="button" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
-    </div>
-	<div id="divMainimg" class="col-12"><img id="mainimg" class="col-12" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
-    
-	<div id="game">
-    <div id="header">    <!-- HEADER -->
-	<img id="hangman_logo" class="col-4 borderx" src="img/logo.png"> <!-- Hangman logo -->
-    <div id="reset" class="col-sm-1 btnHeader borderx" onClick="location.href=location.href"><div id="rrTxt">Main menu</div></div> <!--BUTTON FOR RESET GAME-->
-    <div id="reset" class="col-sm-1 btnHeader borderx" onClick="location.href=location.href"><div id="rrTxt">Play again</div></div> <!--BUTTON FOR RESET GAME-->
-    <div class="status">
-    <p class="col-sm-3 borderx">player</p>
-    
-    <div id="score" class="col-sm-10 align-self-start borderx">Score:</div> <!-- SCORE -->
-    <div id="lives" class="col-sm-10 align-self-end borderx"></div> <!-- LIVES -->
-    
-    <!--<div id="rrBtn"><img src="img/buttons/btn_reset_2.png"></div>
-    <div id="againBtn"><img src="img/buttons/btn_ppplayagain_2.png"></div>-->
-    </div>
-    </div>
-    <!--<div id="div_header_buttom_line" class="col-12"><div id="header_buttom_line"></div></div> <!-- HEADER BUTTON LINE -->
 
-    <div class="row">
-    <img id="imgMistake" class="col-6 borderx" src="img/mistakes/mistake0.png">      
-    <div id="alphabet" class="col-6 borderx"> <!-- TABLE OF ALPHABET -->
+	<div id="difficulity"> <!-- DIFFICULITY -->
+        <div class="text">Choose a difficulity:</div>
+ 		<div class="btn" id="btnEasy" value="0" onclick="funDifficulity(0)">Easy</div>
+		<div class="btn" id="btnHard" value="1" onclick="funDifficulity(1)">Hard</div>
+	</div>
+
+	<div id="category"> <!-- CATEGORY -->
+		<div class="text">Choose a category:</div>
+		<div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
+		<div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
+    </div>
+	
+	<div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
+	  
+	<div id="game">
+	  
+    <div id="header"></div>     <!-- HEADER -->
+    <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
+	<div id="hangman_logo"><img src="img/logo.png"></div>  <!-- Hangman logo -->
+	<div id="lives"></div> <!-- LIVES -->
+	<div id="score">Score:</div> <!-- SCORE -->
+    <div id="rrBtn"><img src="img//buttons/btn_reset_2.png"></div>
+    <div id="againBtn"><img src="img/buttons/btn_ppplayagain_2.png"></div>
+        
+
+    <div id="reset"onClick="location.href=location.href"><div id="rrTxt">reset</div></div> <!--BUTTON FOR RESET GAME-->
+
+      
+    <div id="alphabet"> <!-- TABLE OF ALPHABET -->
         <table width="380px">
-            <tr class="row">
-                <td class="col-2-5 letter" id="A" onclick="checkLetter(0)">A</td>
-                <td class="col-2-5 letter" id="B" onclick="checkLetter(1)">B</td>
-                <td class="col-2-5 letter" id="C" onclick="checkLetter(2)">C</td>
-                <td class="col-2-5 letter" id="D" onclick="checkLetter(3)">D</td>
-                <td class="col-2-5 letter" id="E" onclick="checkLetter(4)">E</td>
+            <tr>
+                <td class="letter" id="A" onclick="checkLetter(0)">A</td>
+                <td class="letter" id="B" onclick="checkLetter(1)">B</td>
+                <td class="letter" id="C" onclick="checkLetter(2)">C</td>
+                <td class="letter" id="D" onclick="checkLetter(3)">D</td>
+                <td class="letter" id="E" onclick="checkLetter(4)">E</td>
             </tr>
-            <tr class="row">
-                <td class="col-2 letter" id="F" onclick="checkLetter(5)">F</td>
-                <td class="col-2 letter" id="G" onclick="checkLetter(6)">G</td>
-                <td class="col-2 letter" id="H" onclick="checkLetter(7)">H</td>
-                <td class="col-2 letter" id="I" onclick="checkLetter(8)">I</td>
-                <td class="col-2 letter" id="J" onclick="checkLetter(9)">J</td>
-                <td class="col-2 letter" id="K" onclick="checkLetter(10)">K</td>
+            <tr id="alphabetLine">
+                <td class="letter" id="F" onclick="checkLetter(5)">F</td>
+                <td class="letter" id="G" onclick="checkLetter(6)">G</td>
+                <td class="letter" id="H" onclick="checkLetter(7)">H</td>
+                <td class="letter" id="I" onclick="checkLetter(8)">I</td>
+                <td class="letter" id="J" onclick="checkLetter(9)">J</td>
+                <td class="letter" id="K" onclick="checkLetter(10)">K</td>
             </tr>
-            <tr class="row">
-                <td class="col-2-5 letter" id="L" onclick="checkLetter(11)">L</td>
-                <td class="col-2-5 letter" id="M" onclick="checkLetter(12)">M</td>
-                <td class="col-2-5 letter" id="N" onclick="checkLetter(13)">N</td>
-                <td class="col-2-5 letter" id="O" onclick="checkLetter(14)">O</td>
-                <td class="col-2-5 letter" id="P" onclick="checkLetter(15)">P</td>
+            <tr>
+                <td class="letter" id="L" onclick="checkLetter(11)">L</td>
+                <td class="letter" id="M" onclick="checkLetter(12)">M</td>
+                <td class="letter" id="N" onclick="checkLetter(13)">N</td>
+                <td class="letter" id="O" onclick="checkLetter(14)">O</td>
+                <td class="letter" id="P" onclick="checkLetter(15)">P</td>
             </tr>
-            <tr class="row">
-                <td class="col-2-5 letter" id="Q" onclick="checkLetter(16)">Q</td>
-                <td class="col-2-5 letter" id="R" onclick="checkLetter(17)">R</td>
-                <td class="col-2-5 letter" id="S" onclick="checkLetter(18)">S</td>
-                <td class="col-2-5 letter" id="T" onclick="checkLetter(19)">T</td>
-                <td class="col-2-5 letter" id="U" onclick="checkLetter(20)">U</td>
+            <tr>
+                <td class="letter" id="Q" onclick="checkLetter(16)">Q</td>
+                <td class="letter" id="R" onclick="checkLetter(17)">R</td>
+                <td class="letter" id="S" onclick="checkLetter(18)">S</td>
+                <td class="letter" id="T" onclick="checkLetter(19)">T</td>
+                <td class="letter" id="U" onclick="checkLetter(20)">U</td>
             </tr>
-            <tr class="row">
-                <td class="col-2-5 letter" id="V" onclick="checkLetter(21)">V</td>
-                <td class="col-2-5 letter" id="W" onclick="checkLetter(22)">W</td>
-                <td class="col-2-5 letter" id="X" onclick="checkLetter(23)">X</td>
-                <td class="col-2-5 letter" id="Y" onclick="checkLetter(24)">Y</td>
-                <td class="col-2-5 letter" id="Z" onclick="checkLetter(25)">Z</td>
+            <tr>
+                <td class="letter" id="V" onclick="checkLetter(21)">V</td>
+                <td class="letter" id="W" onclick="checkLetter(22)">W</td>
+                <td class="letter" id="X" onclick="checkLetter(23)">X</td>
+                <td class="letter" id="Y" onclick="checkLetter(24)">Y</td>
+                <td class="letter" id="Z" onclick="checkLetter(25)">Z</td>
             </tr>
         </table>
+       <div id="difshowdurgam"></div>
+           
+        <div id="catshowdurgam"></div>
     </div> <!-- TABLE OF ALPHABET -->
-    <div class="row">
-    <div id="difshowdurgam" class="col-6 align-self-start choosen borderx"></div>
-    <div id="catshowdurgam" class="col-6 align-self-end choosen borderx"></div>
+      
+    <div id="divMistake"> <!-- DIV images of MISTAKES -->
+         <img id="imgMistake" src="img/mistakes/mistake0.png">
     </div>
-    </div>
-        
-    <div id="hint" class="borderx">
-        <div id="btnHint" class="col-12 button"
-             onclick="btnHint()">HINT</div> <!-- Button Hint -->
-        <div id="hintSentence" class="col-12"></div>
-    </div> 
+	  
    
-     <div class="container">
-    <div class="row">   
-     <div id="footer" class="col-12 borderx">  <!-- footer & button line -->
-     <div id="gWord" class="col-12 borderx"></div>           
-     </div>
-    </div>
-    </div>
-    </div><!-- ### div GAME ### -->
+        
+     <div id="footer">  <!-- footer & button line -->
+     <div id="gWord"></div>
+    <div id="header_buttom_line2"></div> 
+          <div id="hint">
+     <div id="btnHint" onclick="funHint()"><div id="hintText">HINT:</div></div> <!-- Button Hint -->
+     <div id="hintSentence"></div>
+         </div>
+      </div> 
+	</div>
     
   </body> <!-- ### BODY ### -->
 </html>
