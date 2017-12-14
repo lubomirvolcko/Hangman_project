@@ -6,6 +6,11 @@
     margin: 20px auto;
 }
 
+@font-face {
+    font-family: Hastoler;
+    src: url(Hastoler Regular.otf);
+}
+
 /* div score */
 #score{
     color: #f8e6d4;
@@ -45,13 +50,27 @@
     height: 114px;
     margin-top: 130px;
     margin-left: 500px;
+    cursor: pointer;
 }
 
-#rrTxt{
+#rrTxtR, #rrTxtM{
     color:  #009fbc;
-    font-size: 42px;
-    margin-left: 515.15px;
-    margin-top: -75.10px;
+    font-size: 30px;    
+    cursor: pointer;
+}
+
+#rrTxtR:hover, #rrTxtM:hover {
+    color:  #147384;
+}
+
+#rrTxtR {
+    margin-left: 25px;
+    margin-top: -80px;
+}
+
+#rrTxtM {
+    margin-left: 45px;
+    margin-top: -100px;
 }
 
 #againBtn{                      /* again button */
@@ -59,6 +78,7 @@
     height: 130px;
     margin-top: -135px;
     margin-left: 350px;
+    cursor: pointer;
 }
 
                                                         /* Body */
@@ -77,11 +97,18 @@ body{
     margin-top: 700px;
 }
 
+#hint {
+    margin-top: -60px;
+}
+
+#hint:hover {
+    color: white;
+}
+
 #hintText{
     color:  #cc6600;
     font-size: 41px;
     text-align: center;
-    margin-top: -60px;
 }
 
 /* div guess word */
@@ -103,6 +130,7 @@ body{
 
 /* div aplhabet(table of letters) */
 #alphabet {
+    text-align: center;
 	background-color: #cacccd;
 	width: 400px;
 	height: 300px;
@@ -110,6 +138,7 @@ body{
     margin-top: 100px;
 	-webkit-transition: color 0.5s; 
     transition: color 0.5s; 
+    border-radius: 25px;
 }
 
 /* letter in alphabet div */
@@ -119,8 +148,16 @@ body{
     cursor: pointer;
 }
 
+.letter:hover {
+    color:  #147384;
+}
+
+.letterx {
+    margin-left: -200px;
+}
+
 /* button new game */
-#newgame{
+#newgame, #hint, .btn {
     cursor: pointer;
 	background-color: white;
 	width: 200px;
@@ -134,33 +171,12 @@ body{
     transition: background-color 0.5s; /*prechod*/
 }
 /* action of button new game when is cursor on it */
-#newgame:hover {
+#newgame:hover, #hint:hover, .btn:hover {
 	background-color: #cc6600; 
 	color: white; 
 }
 
-/* buttons (difficulity - easy, hard; category - animals, cities) */
-.btn{
-    cursor: pointer;
-	background-color: white;
-	width: 200px;
-	height: 60px;
-	font-size: 50px;
-	color: #009fbc;
-	text-align: center;
-	padding: 5px;
-	margin: 10px auto;
-	-webkit-transition: background-color 0.5s; /*prechod*/
-    transition: background-color 0.5s; /*prechod*/
-}
-
-/* action of buttons (difficulity - easy, hard; category - animals, cities) */
-.btn:hover {
-	background-color: #cc6600;
-	color: white;	
-}
-
-/* printed text up to buttons of difficulity & category */
+/* printed text up to buttons of difficulty & category */
 .text {
 	font-size: 50px;
 	color: #009fbc;
@@ -177,11 +193,11 @@ body{
     margin-top: 60px;
 }
 
-/* img under buttons of buttons of difficulity & category */
+/* img under buttons of buttons of difficulty & category */
 #mainimg {
 	width: 90%;
 	height: auto;
-	margin: 0px 50px auto;
+	margin: 40px 50px auto;
 }
 
 

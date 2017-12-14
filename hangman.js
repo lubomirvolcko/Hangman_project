@@ -18,11 +18,32 @@ var hardAnimals = ["AARDVARK","BABOON", "SEAL","FALCON","PENGUIN","CRAB","SPITZ"
 "WHIPPET","WASP","WALRUS","SWAN","UAKARI","UGUISU","VULTURE","STOAT","LIONFISH","GECKO","LADYBIRD",
 "KAKAPO","KUDU","INDRI","IMPALA","JACKAL","INDRI","IBIS","GROUSE","GOPHER","HIPPOPOTAMUS",
 "HERON","HAVANESE","GAR","TAMARIN"];    //defined field of animals
-var hardCities = ["BELMOPAN", "BISKEK", "BRIDGETOWN","BUJUMBURA","CARACAS","COTONOU","DAUHA","DODOMA",
+var hardCities = ["BELMOPAN", "BIŠKEK", "BRIDGETOWN","BUJUMBURA","CARACAS","COTONOU","DAUHA","DODOMA",
 "FREETOWN","GABORONE","CHARTUM","ISLAMABAD","JAMESTOWN","JEREVAN","KAMPALA","KATHMANDU","KIGALI","KINGSTON",
 "KONAKRY","KOROR","LIBREVILLE","LOME","LUSAKA","MAMOUDZOU","MANAGUA","MASKAT","MONTEVIDEO","MORONI","NAIROBI",
 "NASSAU","NIAMEY","NUUK","OUAGADOUGOU","PALIKIR","PARAMARIBO","PRAIA","QUITO","RABAT","SANA","SKOPJE","SANTIAGO",
-"STANLEY","SUVA","THIMPHU"]; //defined field of cities 
+"STANLEY","SUVA","THIMPHU"]; //defined field of cities
+var hintEasyAnimals = ["CAT", "MOUSE", "HORSE", "DOG", "LION","WORM","FOX","SWAN","FROG","BEAR",
+"PIG","ZEBRA","ELEPHANT","TIGER","PANTHER","BIRD","HAMSTER","MOUSE","DUCK","PENGUIN","CHICKEN",
+"COW","SHEEP","GOAT","FISH","RAT","BUTTERFLY","BEE","SCORPION","SPIDER","FLY","BUNNY", "TURTLE","JELLYFISH","SHARK","DOLPHIN","SNAIL","SNAKE","CENTIPEDE","MONKEY","DEER","BEAVER",
+"CROCODILE","CAMEL","SEAL","GIRAFFE","EAGLE","FERRET","KANGAROO","OSTRICH","BISON","COALA"
+,"PANDA"];
+var hintEasyCities = ["BRATISLAVA", "PARIS", "PRAGUE","SALZBURG","VENICE","DUBAI","CHARLESTON",
+"BRUGES","KRAKOW","BEIRUT","LISBON","SYDNEY","BANGKOK","AMSTERDAM","ROME","ISTANBUL",
+"BERLIN","CAPE","FLORENCE","MARRAKECH","PETERSBURG","BUDAPEST","LONDON","PARIS","TOKYO","BANGKOK",
+"KOSICE","VIENNA","INNSBRUCK","LINZ","OSLO","MONTREAL","LISABON","MOSKVA","MISKOLC","BRNO","DUBLIN",
+"DHAKA","DALLAS","KRAKOW","PRESOV","GRAZ","LONDON","TRNAVA","STOCKHOLM","SINGAPORE","BALI","BOSTON",
+"HAMBURG","VARSAVA","MIAMI","HONGKONG","SYDNEY","BRUSSELS","CARTAGENA","HOLLYWOOD","DELHI"];
+var hintHardAnimals = ["AARDVARK","BABOON", "SEAL","FALCON","PENGUIN","CRAB","SPITZ","GERBIL",
+"PINSCHER","GHARIAL","CATTLE","HIMALAYAN","YAK","ZEBU","WOODPECKER","WOLVERINE","RHINOCEROS","CAPUCHIN",
+"WHIPPET","WASP","WALRUS","SWAN","UAKARI","UGUISU","VULTURE","STOAT","LIONFISH","GECKO","LADYBIRD",
+"KAKAPO","KUDU","INDRI","IMPALA","JACKAL","INDRI","IBIS","GROUSE","GOPHER","HIPPOPOTAMUS",
+"HERON","HAVANESE","GAR","TAMARIN"];
+var hintHardCities = ["BELMOPAN", "BIŠKEK", "BRIDGETOWN","BUJUMBURA","CARACAS","COTONOU","DAUHA","DODOMA",
+"FREETOWN","GABORONE","CHARTUM","ISLAMABAD","JAMESTOWN","JEREVAN","KAMPALA","KATHMANDU","KIGALI","KINGSTON",
+"KONAKRY","KOROR","LIBREVILLE","LOME","LUSAKA","MAMOUDZOU","MANAGUA","MASKAT","MONTEVIDEO","MORONI","NAIROBI",
+"NASSAU","NIAMEY","NUUK","OUAGADOUGOU","PALIKIR","PARAMARIBO","PRAIA","QUITO","RABAT","SANA","SKOPJE","SANTIAGO",
+"STANLEY","SUVA","THIMPHU"];
 var gameDiff;                                               //defined for chosen difficulty
 var gameCat;                                                //defined for chosen category
 var alphabet = ['A', 'B', 'C', 'D', 'E',
@@ -57,11 +78,12 @@ function funNewgame(){ //set visible/unvisible div in html
     document.getElementById('header').style.display = "none";
     document.getElementById('footer').style.display = "none";
     document.getElementById('hint').style.display = "none";
+    document.getElementById('mainmenu').style.display = "none";
     document.getElementById('reset').style.display = "none";
     checkNewgame++; //for finding if was pressed new game
 } /* ### END OF FUNCTION funNewgame ### */ 
 
-function funDifficulty(value){ //set visible/unvisible div in html
+function fundifficulty(value){ //set visible/unvisible div in html
     document.getElementById('play').style.display = "none"; //BUTTON play
     document.getElementById('difficulty').style.display = "none"; //DIV difficility
     document.getElementById('category').style.display = "block"; //DIV category
@@ -70,9 +92,10 @@ function funDifficulty(value){ //set visible/unvisible div in html
     document.getElementById('logo').style.display = "visible"; //IMG logo
     document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameDiff = value; //saveing choosen difficulty to var gameDiff
-    console.log("Difficulty: "+gameDiff+" (0-easy; 1-hard;)"); //print to console chosen difficulty
-     document.getElementById('reset').style.display = "none";
-} /* ### END OF FUNCTION funDifficulty ### */
+    console.log("difficulty: "+gameDiff+" (0-easy; 1-hard;)"); //print to console chosen difficulty
+     document.getElementById('mainmenu').style.display = "none";
+    document.getElementById('reset').style.display = "none";
+} /* ### END OF FUNCTION fundifficulty ### */
 
 function funCategory(value){ //set visible/unvisible div in html
     document.getElementById('play').style.display = "block"; //BUTTON play
@@ -84,7 +107,8 @@ function funCategory(value){ //set visible/unvisible div in html
     document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameCat = value; //saveing choosen category to var gameCat
     console.log("Category: "+gameCat+" (0-animals; 1-cities;)"); //print to console chosen category
-     document.getElementById('reset').style.display = "none";
+     document.getElementById('mainmenu').style.display = "none";
+    document.getElementById('reset').style.display = "none";
 } /* ### END OF FUNCTION funCategory ### */
 
 function checkLetter(value) { //function for chcecking pressed letter
@@ -159,36 +183,68 @@ function checkLetter(value) { //function for chcecking pressed letter
 
         } /* ### END OF FUNCTION checkLetter ### */
 
-
-var checkBtnHint = 1;
-  document.getElementById('btnHint').style.display = "none";
-  if(checkBtnHint==1)
-    {
-      if(gameDiff==0) //if was choosen difficulty easy
-             {         
-                if(gameCat==0) //if was choosen category animals
+function funHint () {
+    var checkBtnHint = 1;
+	document.getElementById('btnHint').style.display = "none";
+	if(checkBtnHint==1)
+		{
+			if(gameDiff==0) //if was choosen difficulity easy
+             { 				 
+              	if(gameCat==0) //if was choosen category animals
                 {
                 document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyAnimals[random];
-        }
-        else if(gameCat==1) //if was choosen category cities
+				}
+				else if(gameCat==1) //if was choosen category cities
                 {
                 document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyCities[random];   
                 }
               
-            }
-      else if(gameDiff==1) //if was choosen difficulty hard
+          	}
+			else if(gameDiff==1) //if was choosen difficulity hard
             {
-          
-              if(gameCat==0) //if was choosen category animals
+				  
+            	if(gameCat==0) //if was choosen category animals
                 {
-        document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardAnimals[random];   
+				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardAnimals[random];		
                 }
-        else if(gameCat==1) //if was choosen category cities
+				else if(gameCat==1) //if was choosen category cities
                 {
-        document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];    
+				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];		
                 }
               }
-    }
+		}
+}
+
+
+var checkBtnHint = 1;
+	document.getElementById('btnHint').style.display = "none";
+	if(checkBtnHint==1)
+		{
+			if(gameDiff==0) //if was choosen difficulty easy
+             { 				 
+              	if(gameCat==0) //if was choosen category animals
+                {
+                document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyAnimals[random];
+				}
+				else if(gameCat==1) //if was choosen category cities
+                {
+                document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyCities[random];   
+                }
+              
+          	}
+			else if(gameDiff==1) //if was choosen difficulty hard
+            {
+				  
+            	if(gameCat==0) //if was choosen category animals
+                {
+				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardAnimals[random];		
+                }
+				else if(gameCat==1) //if was choosen category cities
+                {
+				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];		
+                }
+              }
+		}
 
 
 
@@ -211,7 +267,8 @@ function game () { //function for game
             document.getElementById('divMistake').style.display = "none"; //DIV mistakes
             document.getElementById("lives").style.display = "none"; //DIV lives
             document.getElementById('score').style.display = "none"; //DIV score
-             document.getElementById('reset').style.display = "none";
+             document.getElementById('mainmenu').style.display = "none";
+               document.getElementById('reset').style.display = "none";
            }else if(checkNewgame>0) //if WAS pressed button newgame
            {
             document.getElementById('logo').style.display = "none"; //IMG logo
@@ -225,6 +282,7 @@ function game () { //function for game
             document.getElementById('header').style.display = "block"; //Header
             document.getElementById('footer').style.display = "block"; //Footer
             document.getElementById('hint').style.display = "block";
+            document.getElementById('mainmenu').style.display = "block";
             document.getElementById('reset').style.display = "block";
             document.getElementById('header_buttom_line').style.display = "block";
             document.getElementById('hangman_logo').style.display = "block";   

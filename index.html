@@ -2,52 +2,58 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
     <link type="text/css" href="hangman.css" rel="stylesheet">
     <script src="hangman.js"></script>
-  <title>HANGMAN</title>
+	<title>HANGMAN</title>
 </head>
   
     
 <body onload="game()"> <!-- ### BODY ### -->
     
-  <div><img id="logo" src="img/HangmanSovy_logo.svg"></div> <!-- LOGO on entrypage -->
-    
-  <div id="newgame"> <!-- BUTTON newgame -->
-    <div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
-  </div>
+	<div><img id="logo" src="img/HangmanSovy_logo.svg"></div> <!-- LOGO on entrypage -->
+	  
+	<div id="newgame"> <!-- BUTTON newgame -->
+		<div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
+	</div>
       
-  <div id="play"> <!-- BUTTON play -->
-    <div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
-  </div>
+	<div id="play"> <!-- BUTTON play -->
+		<div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
+	</div>
 
-  <div id="difficulty"> <!-- DIFFICULTY -->
+	<div id="difficulty"> <!-- difficulty -->
         <div class="text">Choose a difficulty:</div>
-    <div class="btn" id="btnEasy" value="0" onclick="funDifficulty(0)">Easy</div>
-    <div class="btn" id="btnHard" value="1" onclick="funDifficulty(1)">Hard</div>
-  </div>
+ 		<div class="btn" id="btnEasy" value="0" onclick="fundifficulty(0)">Easy</div>
+		<div class="btn" id="btnHard" value="1" onclick="fundifficulty(1)">Hard</div>
+	</div>
 
-  <div id="category"> <!-- CATEGORY -->
-    <div class="text">Choose a category:</div>
-    <div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
-    <div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
+	<div id="category"> <!-- CATEGORY -->
+		<div class="text">Choose a category:</div>
+		<div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
+		<div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
     </div>
-  
-  <div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
-    
-  <div id="game">
-    
+	
+	<div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
+	  
+	<div id="game">
+	  
     <div id="header"></div>     <!-- HEADER -->
     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
-  <div id="hangman_logo"><img src="img/logo.png"></div>  <!-- Hangman logo -->
-  <div id="lives"></div> <!-- LIVES -->
-  <div id="score">Score:</div> <!-- SCORE -->
-    <div id="rrBtn"><img src="img//buttons/btn_reset_2.png"></div>
-    <div id="againBtn"><img src="img/buttons/btn_ppplayagain_2.png"></div>
+	<div id="hangman_logo"><img src="img/logo.png"></div>  <!-- Hangman logo -->
+	<div id="lives"></div> <!-- LIVES -->
+	<div id="score">Score:</div> <!-- SCORE -->
+    <div id="rrBtn">
+        <img src="img//buttons/btn_reset_2.png">
+        <div id="reset"><div id="rrTxtR">Reset</div></div> <!--BUTTON FOR RESET GAME-->
+    </div>
+    <div id="againBtn" onClick="location.href=location.href">
+        <img src="img/buttons/btn_ppplayagain_2.png">
+         <div id="mainmenu"><div id="rrTxtM">Main<br>menu</div></div> <!--BUTTON FOR back to main menu-->
+    </div>
         
 
-    <div id="reset"onClick="location.href=location.href"><div id="rrTxt">reset</div></div> <!--BUTTON FOR RESET GAME-->
-
+   
+    
       
     <div id="alphabet"> <!-- TABLE OF ALPHABET -->
         <table width="380px">
@@ -64,23 +70,25 @@
                 <td class="letter" id="H" onclick="checkLetter(7)">H</td>
                 <td class="letter" id="I" onclick="checkLetter(8)">I</td>
                 <td class="letter" id="J" onclick="checkLetter(9)">J</td>
-                <td class="letter" id="K" onclick="checkLetter(10)">K</td>
             </tr>
             <tr>
+                <td class="letter" id="K" onclick="checkLetter(10)">K</td>
                 <td class="letter" id="L" onclick="checkLetter(11)">L</td>
                 <td class="letter" id="M" onclick="checkLetter(12)">M</td>
                 <td class="letter" id="N" onclick="checkLetter(13)">N</td>
                 <td class="letter" id="O" onclick="checkLetter(14)">O</td>
-                <td class="letter" id="P" onclick="checkLetter(15)">P</td>
             </tr>
             <tr>
+                <td class="letter" id="P" onclick="checkLetter(15)">P</td>
                 <td class="letter" id="Q" onclick="checkLetter(16)">Q</td>
                 <td class="letter" id="R" onclick="checkLetter(17)">R</td>
                 <td class="letter" id="S" onclick="checkLetter(18)">S</td>
                 <td class="letter" id="T" onclick="checkLetter(19)">T</td>
-                <td class="letter" id="U" onclick="checkLetter(20)">U</td>
             </tr>
-            <tr>
+            </table>
+            <table width="380px">
+            <tr class="letterx">
+                <td class="letter" id="U" onclick="checkLetter(20)">U</td>
                 <td class="letter" id="V" onclick="checkLetter(21)">V</td>
                 <td class="letter" id="W" onclick="checkLetter(22)">W</td>
                 <td class="letter" id="X" onclick="checkLetter(23)">X</td>
@@ -96,7 +104,7 @@
     <div id="divMistake"> <!-- DIV images of MISTAKES -->
          <img id="imgMistake" src="img/mistakes/mistake0.png">
     </div>
-    
+	  
    
         
      <div id="footer">  <!-- footer & button line -->
@@ -107,7 +115,7 @@
      <div id="hintSentence"></div>
          </div>
       </div> 
-  </div>
+	</div>
     
   </body> <!-- ### BODY ### -->
 </html>
