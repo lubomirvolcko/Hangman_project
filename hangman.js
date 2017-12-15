@@ -75,6 +75,7 @@ function funNewgame(){ //set visible/unvisible div in html
     document.getElementById('alphabet').style.display = "none"; //DIV alphabet
     document.getElementById('divMistake').style.display = "none"; //DIV mistakes
     document.getElementById('logo').style.display = "visible"; //IMG logo
+    document.getElementById('divLogo').style.display = "visible"; //IMG logo
     document.getElementById('header').style.display = "none";
     document.getElementById('footer').style.display = "none";
     document.getElementById('hint').style.display = "none";
@@ -90,6 +91,7 @@ function fundifficulty(value){ //set visible/unvisible div in html
     document.getElementById('alphabet').style.display = "none"; //DIV alphabet
     document.getElementById('divMistake').style.display = "none"; //DIV mistakes
     document.getElementById('logo').style.display = "visible"; //IMG logo
+    document.getElementById('divLogo').style.display = "visible"; //IMG logo
     document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameDiff = value; //saveing choosen difficulty to var gameDiff
     console.log("difficulty: "+gameDiff+" (0-easy; 1-hard;)"); //print to console chosen difficulty
@@ -104,6 +106,7 @@ function funCategory(value){ //set visible/unvisible div in html
     document.getElementById('alphabet').style.display = "none"; //DIV alphabet
     document.getElementById('divMistake').style.display = "none"; //DIV mistakes
     document.getElementById('logo').style.display = "visible"; //IMG logo
+    document.getElementById('divLogo').style.display = "visible"; //IMG logo
     document.getElementById('mainimg').style.display = "visible"; //DIV mainimg
     gameCat = value; //saveing choosen category to var gameCat
     console.log("Category: "+gameCat+" (0-animals; 1-cities;)"); //print to console chosen category
@@ -173,6 +176,8 @@ function checkLetter(value) { //function for chcecking pressed letter
                 {
                     document.getElementById("lives").innerHTML="Game Over!"; //print Game Over!
                     checkScore=score; //set value of score to checkScore
+                    var s=answerArray.join(" "); //insert between underlines space
+                    document.getElementById("gWord").innerHTML= "<span style='color:#cd6a02;'>"+word+"</span>"; //write on screen underlines
                 }
 
         for(var g=0;g<26;g++) 
@@ -217,7 +222,6 @@ function funHint () {
 
 
 var checkBtnHint = 1;
-	document.getElementById('btnHint').style.display = "none";
 	if(checkBtnHint==1)
 		{
 			if(gameDiff==0) //if was choosen difficulty easy
@@ -250,7 +254,7 @@ var checkBtnHint = 1;
 
 
 
-function game () { //function for game
+function game() { //function for game
         
         document.getElementById('play').style.display = "none"; //BUTTON play
         document.getElementById('difficulty').style.display = "none"; //DIV difficility
@@ -259,7 +263,7 @@ function game () { //function for game
         document.getElementById('footer').style.display = "none"; //Footer
         document.getElementById('hint').style.display = "none";
         document.getElementById('header_buttom_line').style.display = "none";
-        document.getElementById('hangman_logo').style.display = "none";  
+        document.getElementById('hangman_logo').style.display = "none";
 
         if(checkNewgame==0) //if WASN'T pressed button newgame
            {
@@ -272,6 +276,7 @@ function game () { //function for game
            }else if(checkNewgame>0) //if WAS pressed button newgame
            {
             document.getElementById('logo').style.display = "none"; //IMG logo
+            document.getElementById('divLogo').style.display = "none"; //IMG logo
             document.getElementById('mainimg').style.display = "none"; //DIV mainimg
             document.getElementById('alphabet').style.display = "block"; //DIV alphabet
             document.getElementById('divMistake').style.display = "block"; //DIV mistakes
@@ -321,12 +326,16 @@ function game () { //function for game
             
            for(var i = 0; i<word.length;i++)  //browse word length
            {
-            answerArray[i]="_";               //write underlines exact position
-
+           answerArray[i]="<span style='color:#cd6a02;'>_</span>";    //write underlines exact position
            }
            var s=answerArray.join(" "); //insert between underlines space
            document.getElementById("gWord").innerHTML= s; //write on screen underlines 
 
-
+ document.getElementById('btnReset').onclick = function() {
+ 
+ 
+ game()
+ 
+ }
     
 } /* ### END OF FUNCTION game ###*/

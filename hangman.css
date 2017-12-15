@@ -3,53 +3,78 @@
     width: auto;
     height: 150px;
     background-color: #009fbc;
-    margin: 20px auto;
+    margin: -40px auto;
 }
 
 @font-face {
     font-family: Hastoler;
-    src: url(Hastoler Regular.otf);
+    src: url(hastoler.otf);
+}
+
+#player {
+    width: 200px;
+    color: #f8e6d4;
+    font-size: 64px;
+    margin: -180px;
+    margin-left: 640px;
+    margin-top: -180px;
 }
 
 /* div score */
 #score{
+    width: 300px;
+    height: 80px;
     color: #f8e6d4;
     font-size: 64px;
-    margin: -180px;
-    margin-left: 930px;
-    margin-top: 80px;
+    text-align: center;
+    margin-left: 830px;
+    margin-top: -215px;
 }
 
 
 /* div lives */
 #lives{
+    width: 300px; 
+    height: 80px;
     color: #f8e6d4;
+    text-align: right;
     font-size: 64px;
-    font-weight: 400px;
-    margin: -230px;
-    margin-left: 930px;
-    margin-top: -40px;
+    margin-left: 780px;
+    margin-top: -10px;
 }
 
 #header_buttom_line{
     width: auto;
-    height: 13px;
+    height: 7px;
     background-color: #cd6a02;
-    margin: -25px auto;
+    margin: 40px auto;
+}
+
+#divLogo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo {
+    max-width: 1000px;
 }
 
 #hangman_logo{                                      /* logo on header */
     width: 270px;
-    height: 81px;
-    margin-top: -125px;
+    height: 82px;
+    margin-top: 40px;
     margin-left: 25px;
+}
+
+#headLogo {
+    padding-top: 35px;
 }
 
 #rrBtn{                         /* reset button */
     width: 112px;
     height: 114px;
-    margin-top: 130px;
-    margin-left: 500px;
+    padding-top: 110px;
+    margin-left: 600px;
     cursor: pointer;
 }
 
@@ -64,26 +89,58 @@
 }
 
 #rrTxtR {
-    margin-left: 25px;
-    margin-top: -80px;
+    margin-left: 20px;
+    margin-top: -73px;
 }
 
 #rrTxtM {
-    margin-left: 45px;
-    margin-top: -100px;
+    margin-left: 155px;
+    margin-top: -92px;
+}
+
+#btnReset {
+    max-height: 105px;
+    max-width: 120px;
+    margin-top: -70px;    
+}
+
+#btnMainmenu {
+    max-height: 115px;
+    max-width: 130px;
+    padding-top: 150px;
+    margin-left: 120px;
 }
 
 #againBtn{                      /* again button */
     width: 128px;
     height: 130px;
-    margin-top: -135px;
+    margin-top: -220px;
     margin-left: 350px;
     cursor: pointer;
 }
 
+#hint {
+    margin-top: 590px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+#hintSentence {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-size: 50px;
+	color: #009fbc;
+    text-align: center;
+}
+
+#game {
+    margin: 0px auto;
+    height: 800px;
+}
+
                                                         /* Body */
 body{
-    font-family: "Hastoler Regular", Times, serif;
+    font-family: Hastoler, Times, serif;
     width: 60%;
 	background-color: #f8e6d4;
 	margin: 0 auto;
@@ -93,27 +150,13 @@ body{
 #footer{                                                /* Footer */
     background-color: #cccccc;
     width: auto;
-    height: 143px;
-    margin-top: 700px;
-}
-
-#hint {
-    margin-top: -60px;
-}
-
-#hint:hover {
-    color: white;
-}
-
-#hintText{
-    color:  #cc6600;
-    font-size: 41px;
-    text-align: center;
+    height: 115px;
+    margin-top: 0px;
 }
 
 /* div guess word */
 #gWord{
-	color: #cd6a02;;
+	color: #009fbc;
 	font-size: 50px;
     float: inherit; 
     text-align: center;
@@ -133,9 +176,8 @@ body{
     text-align: center;
 	background-color: #cacccd;
 	width: 400px;
-	height: 300px;
+	height: 310px;
 	float: right;
-    margin-top: 100px;
 	-webkit-transition: color 0.5s; 
     transition: color 0.5s; 
     border-radius: 25px;
@@ -157,7 +199,7 @@ body{
 }
 
 /* button new game */
-#newgame, #hint, .btn {
+#newgame, #btnHint, .btn {
     cursor: pointer;
 	background-color: white;
 	width: 200px;
@@ -171,7 +213,7 @@ body{
     transition: background-color 0.5s; /*prechod*/
 }
 /* action of button new game when is cursor on it */
-#newgame:hover, #hint:hover, .btn:hover {
+#newgame:hover, #btnHint:hover, .btn:hover {
 	background-color: #cc6600; 
 	color: white; 
 }
@@ -190,7 +232,6 @@ body{
 	float: left;
 	text-align: right;
     margin-left: 50px;
-    margin-top: 60px;
 }
 
 /* img under buttons of buttons of difficulty & category */

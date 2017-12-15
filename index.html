@@ -11,7 +11,7 @@
     
 <body onload="game()"> <!-- ### BODY ### -->
     
-	<div><img id="logo" src="img/HangmanSovy_logo.svg"></div> <!-- LOGO on entrypage -->
+	<div id="divLogo"><img id="logo" src="img/HangmanSovy_logo.png"></div> <!-- LOGO on entrypage -->
 	  
 	<div id="newgame"> <!-- BUTTON newgame -->
 		<div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
@@ -37,19 +37,20 @@
 	  
 	<div id="game">
 	  
-    <div id="header"></div>     <!-- HEADER -->
-    <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
-	<div id="hangman_logo"><img src="img/logo.png"></div>  <!-- Hangman logo -->
-	<div id="lives"></div> <!-- LIVES -->
-	<div id="score">Score:</div> <!-- SCORE -->
-    <div id="rrBtn">
-        <img src="img//buttons/btn_reset_2.png">
+    <div id="header">     <!-- HEADER -->
+	<div id="hangman_logo"><img id="headLogo" src="img/logo.png"></div>  <!-- Hangman logo -->
+    <div id="againBtn" onClick="location.href=location.href">
+        <img id="btnMainmenu" src="img/buttons/btn_ppplayagain_2.png">
+         <div id="mainmenu"><div id="rrTxtM">Main<br>menu</div></div> <!--BUTTON FOR back to main menu-->
+    </div> 
+        <div id="rrBtn">
+        <img id="btnReset" src="img//buttons/btn_reset_2.png">
         <div id="reset"><div id="rrTxtR">Reset</div></div> <!--BUTTON FOR RESET GAME-->
     </div>
-    <div id="againBtn" onClick="location.href=location.href">
-        <img src="img/buttons/btn_ppplayagain_2.png">
-         <div id="mainmenu"><div id="rrTxtM">Main<br>menu</div></div> <!--BUTTON FOR back to main menu-->
+    <div id="score">Score:</div> <!-- SCORE -->
+    <div id="lives"></div> <!-- LIVES -->    
     </div>
+    <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
         
 
    
@@ -105,15 +106,17 @@
          <img id="imgMistake" src="img/mistakes/mistake0.png">
     </div>
 	  
+        
+     <div id="hint" onclick="funHint()"> <!-- BUTTON HINT -->
+         <div id="btnHint">HINT</div>
+    </div> <!-- Button Hint -->
+     <div id="hintSentence"></div>
+         
    
         
      <div id="footer">  <!-- footer & button line -->
-     <div id="gWord"></div>
-    <div id="header_buttom_line2"></div> 
-          <div id="hint">
-     <div id="btnHint" onclick="funHint()"><div id="hintText">HINT:</div></div> <!-- Button Hint -->
-     <div id="hintSentence"></div>
-         </div>
+        <div id="gWord"></div>
+        <div id="header_buttom_line2"></div> 
       </div> 
 	</div>
     
