@@ -1,23 +1,15 @@
+/* font for document */
+@font-face {
+    font-family: Hastoler;
+    src: url(hastoler.otf);
+}
+
 /* div header */
 #header{                                           /* header */
     width: auto;
     height: 150px;
     background-color: #009fbc;
     margin: -40px auto;
-}
-
-@font-face {
-    font-family: Hastoler;
-    src: url(hastoler.otf);
-}
-
-#player {
-    width: 200px;
-    color: #f8e6d4;
-    font-size: 64px;
-    margin: -180px;
-    margin-left: 640px;
-    margin-top: -180px;
 }
 
 /* div score */
@@ -31,7 +23,6 @@
     margin-top: -215px;
 }
 
-
 /* div lives */
 #lives{
     width: 300px; 
@@ -43,22 +34,29 @@
     margin-top: -10px;
 }
 
+/* line under header */
 #header_buttom_line{
     width: auto;
     height: 7px;
-    background-color: #cd6a02;
+    background: -webkit-linear-gradient(left, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* Standard syntax (must be last) */
     margin: 40px auto;
 }
 
+/* div logo on entry page */
 #divLogo {
     text-align: center;
     margin-top: 20px;
 }
 
+/* img logo on entry page */
 #logo {
     max-width: 1000px;
 }
 
+/* div logo in header */
 #hangman_logo{                                      /* logo on header */
     width: 270px;
     height: 82px;
@@ -66,10 +64,12 @@
     margin-left: 25px;
 }
 
+/* img logo in header */
 #headLogo {
     padding-top: 35px;
 }
 
+/* div reset button */
 #rrBtn{                         /* reset button */
     width: 112px;
     height: 114px;
@@ -78,32 +78,38 @@
     cursor: pointer;
 }
 
+/* text in buttons in header */
 #rrTxtR, #rrTxtM{
     color:  #009fbc;
     font-size: 30px;    
     cursor: pointer;
 }
 
+/* text in buttons in header */
 #rrTxtR:hover, #rrTxtM:hover {
     color:  #147384;
 }
 
+/* text in button reset in header */
 #rrTxtR {
     margin-left: 20px;
     margin-top: -73px;
 }
 
+/* text in button main menu in header */
 #rrTxtM {
     margin-left: 155px;
     margin-top: -92px;
 }
 
+/* img in button reset in header */
 #btnReset {
     max-height: 105px;
     max-width: 120px;
     margin-top: -70px;    
 }
 
+/* img in button main menu in header */
 #btnMainmenu {
     max-height: 115px;
     max-width: 130px;
@@ -111,7 +117,8 @@
     margin-left: 120px;
 }
 
-#againBtn{                      /* again button */
+/* div in button main menu in header */
+#againBtn{                   
     width: 128px;
     height: 130px;
     margin-top: -220px;
@@ -119,39 +126,18 @@
     cursor: pointer;
 }
 
-#hint {
-    margin-top: 590px;
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-#hintSentence {
-    margin-top: 30px;
-    margin-bottom: 80px;
-    font-size: 50px;
-	color: #009fbc;
-    text-align: center;
-}
-
+/* div game */
 #game {
     margin: 0px auto;
-    height: 800px;
+    height: 100vw;
 }
 
-                                                        /* Body */
+/* Body */
 body{
     font-family: Hastoler, Times, serif;
     width: 60%;
 	background-color: #f8e6d4;
 	margin: 0 auto;
-}
-
-/* div footer */
-#footer{                                                /* Footer */
-    background-color: #cccccc;
-    width: auto;
-    height: 115px;
-    margin-top: 0px;
 }
 
 /* div guess word */
@@ -164,10 +150,14 @@ body{
     margin-top: -40px;
 }                             
 
+/* line top of footer */
 #header_buttom_line2{
     width: auto;
     height: 8px;
-    background-color: #cd6a02;
+    background: -webkit-linear-gradient(left, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* Standard syntax (must be last) */
     margin-top: -120px;                              /* End of footer */
 }
 
@@ -183,22 +173,29 @@ body{
     border-radius: 25px;
 }
 
-/* letter in alphabet div */
+/* div alphabet and mistake */
+#alphabet, #divMistake {
+    margin: -20px auto;
+}
+
+/* letter in alphabet */
 .letter{
     font-size: 50px;
     color: #009fbc;
     cursor: pointer;
 }
 
+/* letter in alphabet */
 .letter:hover {
     color:  #147384;
 }
 
+/* last line in alphabet */
 .letterx {
     margin-left: -200px;
 }
 
-/* button new game */
+/* buttons */
 #newgame, #btnHint, .btn {
     cursor: pointer;
 	background-color: white;
@@ -209,13 +206,47 @@ body{
 	text-align: center;
 	padding: 5px;
 	margin: 10px auto;
-	-webkit-transition: background-color 0.5s; /*prechod*/
-    transition: background-color 0.5s; /*prechod*/
+	-webkit-transition: background-color 0.8s; /*prechod*/
+    transition: background-color 0.8s; /*prechod*/
 }
-/* action of button new game when is cursor on it */
+
+/* action of buttons */
 #newgame:hover, #btnHint:hover, .btn:hover {
 	background-color: #cc6600; 
 	color: white; 
+}
+
+/* div hint */
+#hint {
+    margin-top: 590px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* sentennce hint */
+#hintSentence {
+    margin-bottom: 50px;
+    font-size: 50px;
+	color: #009fbc;
+    text-align: center;
+}
+
+/* div footer */
+#footer{                                                /* Footer */
+    background-color: #cccccc;
+    width: auto;
+    height: 115px;
+    margin-top: 20px;
+}
+
+/* buttons new game & play */
+#newgame, #play {
+    margin: 128.5px auto;
+}
+
+/* div category and difficulty */
+#category, #difficulty {
+    margin: 50px auto;
 }
 
 /* printed text up to buttons of difficulty & category */
@@ -237,12 +268,11 @@ body{
 /* img under buttons of buttons of difficulty & category */
 #mainimg {
 	width: 90%;
-	height: auto;
 	margin: 40px 50px auto;
 }
 
-
-#difshowdurgam{            /*design for difficulty text*/
+ /* design for difficulty & category text during game */
+#difshowdurgam, #catshowdurgam {           
     color: #009fbc;
     text-align: left;
     font-size: 34px;
@@ -250,14 +280,4 @@ body{
     position: relative;
     top: 55px;
     left: 36px;    
-    }                                 
-
-#catshowdurgam{                      /*design for category text*/
-    color: #009fbc;
-    text-align: left;
-    font-size: 34px;
-    font-weight: 200px;
-    position: relative;
-    top: 55px;
-    left: 36px;                                     
 }

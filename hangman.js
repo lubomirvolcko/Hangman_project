@@ -6,23 +6,23 @@ var easyAnimals = ["CAT", "MOUSE", "HORSE", "DOG", "LION","WORM","FOX","SWAN","F
 "COW","SHEEP","GOAT","FISH","RAT","BUTTERFLY","BEE","SCORPION","SPIDER","FLY","BUNNY",
 "TURTLE","JELLYFISH","SHARK","DOLPHIN","SNAIL","SNAKE","CENTIPEDE","MONKEY","DEER","BEAVER",
 "CROCODILE","CAMEL","SEAL","GIRAFFE","EAGLE","FERRET","KANGAROO","OSTRICH","BISON","COALA"
-,"PANDA"];   //defined field of animals
+,"PANDA"];                                    //defined field of animals
 var easyCities = ["BRATISLAVA", "PARIS", "PRAGUE","SALZBURG","VENICE","DUBAI","CHARLESTON",
 "BRUGES","KRAKOW","BEIRUT","LISBON","SYDNEY","BANGKOK","AMSTERDAM","ROME","ISTANBUL",
 "BERLIN","CAPE","FLORENCE","MARRAKECH","PETERSBURG","BUDAPEST","LONDON","PARIS","TOKYO","BANGKOK",
 "KOSICE","VIENNA","INNSBRUCK","LINZ","OSLO","MONTREAL","LISABON","MOSKVA","MISKOLC","BRNO","DUBLIN",
 "DHAKA","DALLAS","KRAKOW","PRESOV","GRAZ","LONDON","TRNAVA","STOCKHOLM","SINGAPORE","BALI","BOSTON",
-"HAMBURG","VARSAVA","MIAMI","HONGKONG","SYDNEY","BRUSSELS","CARTAGENA","HOLLYWOOD","DELHI"];  //defined field of cities
+"HAMBURG","VARSAVA","MIAMI","HONGKONG","SYDNEY","BRUSSELS","CARTAGENA","HOLLYWOOD","DELHI"];                                     //defined field of cities
 var hardAnimals = ["AARDVARK","BABOON", "SEAL","FALCON","PENGUIN","CRAB","SPITZ","GERBIL",
 "PINSCHER","GHARIAL","CATTLE","HIMALAYAN","YAK","ZEBU","WOODPECKER","WOLVERINE","RHINOCEROS","CAPUCHIN",
 "WHIPPET","WASP","WALRUS","SWAN","UAKARI","UGUISU","VULTURE","STOAT","LIONFISH","GECKO","LADYBIRD",
 "KAKAPO","KUDU","INDRI","IMPALA","JACKAL","INDRI","IBIS","GROUSE","GOPHER","HIPPOPOTAMUS",
-"HERON","HAVANESE","GAR","TAMARIN"];    //defined field of animals
+"HERON","HAVANESE","GAR","TAMARIN"];                                    //defined field of animals
 var hardCities = ["BELMOPAN", "BIŠKEK", "BRIDGETOWN","BUJUMBURA","CARACAS","COTONOU","DAUHA","DODOMA",
 "FREETOWN","GABORONE","CHARTUM","ISLAMABAD","JAMESTOWN","JEREVAN","KAMPALA","KATHMANDU","KIGALI","KINGSTON",
 "KONAKRY","KOROR","LIBREVILLE","LOME","LUSAKA","MAMOUDZOU","MANAGUA","MASKAT","MONTEVIDEO","MORONI","NAIROBI",
 "NASSAU","NIAMEY","NUUK","OUAGADOUGOU","PALIKIR","PARAMARIBO","PRAIA","QUITO","RABAT","SANA","SKOPJE","SANTIAGO",
-"STANLEY","SUVA","THIMPHU"]; //defined field of cities
+"STANLEY","SUVA","THIMPHU"];                                     //defined field of cities
 var hintEasyAnimals = ["CAT", "MOUSE", "HORSE", "DOG", "LION","WORM","FOX","SWAN","FROG","BEAR",
 "PIG","ZEBRA","ELEPHANT","TIGER","PANTHER","BIRD","HAMSTER","MOUSE","DUCK","PENGUIN","CHICKEN",
 "COW","SHEEP","GOAT","FISH","RAT","BUTTERFLY","BEE","SCORPION","SPIDER","FLY","BUNNY", "TURTLE","JELLYFISH","SHARK","DOLPHIN","SNAIL","SNAKE","CENTIPEDE","MONKEY","DEER","BEAVER",
@@ -44,29 +44,21 @@ var hintHardCities = ["BELMOPAN", "BIŠKEK", "BRIDGETOWN","BUJUMBURA","CARACAS",
 "KONAKRY","KOROR","LIBREVILLE","LOME","LUSAKA","MAMOUDZOU","MANAGUA","MASKAT","MONTEVIDEO","MORONI","NAIROBI",
 "NASSAU","NIAMEY","NUUK","OUAGADOUGOU","PALIKIR","PARAMARIBO","PRAIA","QUITO","RABAT","SANA","SKOPJE","SANTIAGO",
 "STANLEY","SUVA","THIMPHU"];
-var gameDiff;                                               //defined for chosen difficulty
-var gameCat;                                                //defined for chosen category
+var gameDiff;                                                 //defined for chosen difficulty
+var gameCat;                                                  //defined for chosen category
 var alphabet = ['A', 'B', 'C', 'D', 'E',
                 'F', 'G', 'H', 'I', 'J',
                 'K', 'L', 'M', 'N', 'O', 
                 'P', 'Q', 'R', 'S', 'T', 
-                'U', 'V', 'W', 'X', 'Y', 'Z'];                                     //defined field of alphabet
-var play = document.getElementById('play');                 //defined div play
-var btnPlay = document.getElementById('btnPlay');           //defined button play
-var difficulty = document.getElementById('difficulty');   //defined div difficulty
-var btnEasy = document.getElementById('btnEasy');           //defined button easy
-var btnHard = document.getElementById('btnHard');           //defined button hard
-var category = document.getElementById('category');         //defined div difficulty
-var btnAnimals = document.getElementById('btnAnimals');     //defined button animals
-var btnCities = document.getElementById('btnCities');       //defined button cities
-var gWord;                                                  //defined for guessing word
-var character = "_ ";                                       //defined for getting character _ instead of letter
-var checkNewgame=0;                                         //define for chceking if is pressed btn Newgame
-var answerArray=[];                                         //define array for underline and guessed letter
-var lives=10;                                               //define for lives
-var score=0;                                                //define for score
-var checkWord=0;                                            //define for counting right guessed word
-var checkScore;                                             //define for finish score
+                'U', 'V', 'W', 'X', 'Y', 'Z'];                                       //defined field of alphabet
+var gWord;                                                    //defined for guessing word
+var character = "_ ";                                         //defined for getting character _ instead of letter
+var checkNewgame=0;                                           //define for chceking if is pressed btn Newgame
+var answerArray=[];                                           //define array for underline and guessed letter
+var lives=10;                                                 //define for lives
+var score=0;                                                  //define for score
+var checkWord=0;                                              //define for counting right guessed word
+var checkScore;                                               //define for finish score
 /* ##### END OF VARS #### */
 
 function funNewgame(){ //set visible/unvisible div in html
@@ -217,42 +209,12 @@ function funHint () {
 				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];		
                 }
               }
+             if(score>10)
+                {
+                    score-=10;
+                }
 		}
 }
-
-
-var checkBtnHint = 1;
-	if(checkBtnHint==1)
-		{
-			if(gameDiff==0) //if was choosen difficulty easy
-             { 				 
-              	if(gameCat==0) //if was choosen category animals
-                {
-                document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyAnimals[random];
-				}
-				else if(gameCat==1) //if was choosen category cities
-                {
-                document.getElementById('hintSentence').innerHTML = "Hint: "+hintEasyCities[random];   
-                }
-              
-          	}
-			else if(gameDiff==1) //if was choosen difficulty hard
-            {
-				  
-            	if(gameCat==0) //if was choosen category animals
-                {
-				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardAnimals[random];		
-                }
-				else if(gameCat==1) //if was choosen category cities
-                {
-				document.getElementById('hintSentence').innerHTML = "Hint: "+hintHardCities[random];		
-                }
-              }
-		}
-
-
-
-
 
 function game() { //function for game
         
@@ -330,12 +292,65 @@ function game() { //function for game
            }
            var s=answerArray.join(" "); //insert between underlines space
            document.getElementById("gWord").innerHTML= s; //write on screen underlines 
-
- document.getElementById('btnReset').onclick = function() {
- 
- 
- game()
- 
- }
+    
+    
     
 } /* ### END OF FUNCTION game ###*/
+
+function reset () {
+var checkReset = 1;
+score=0;
+lives=10;
+checkWord=0;
+for(var i = 0; i<word.length;i++)  //browse word length
+           {
+           answerArray[i]="";    //write underlines exact position
+           }
+for(var g=0;g<26;g++) 
+        {
+            document.getElementById(alphabet[g]).style.visibility = "visible"; //hide letter after click
+        }
+document.getElementById('lives').innerHTML = "Lives: "+lives;
+ imgMistake.src="img/mistakes/mistake0.png";
+ if(gameDiff==0) //if was choosen difficulty easy
+             { document.getElementById("difshowdurgam").innerHTML="Difficulty: Easy"
+              if(gameCat==0) //if was choosen category animals
+                {
+                    random = Math.floor(Math.random()*easyAnimals.length); //generate random  word from field easyAnimals
+                    word = easyAnimals[random]; //save random word from field easyAnimals to var word
+                    document.getElementById("catshowdurgam").innerHTML="Category: Animals";
+                }else if(gameCat==1) //if was choosen category cities
+                {
+                    random = Math.floor(Math.random()*easyCities.length); //generate random  word from field easyCities 
+                    word = easyCities[random]; //save random word from field easyCities to var word
+                    document.getElementById("catshowdurgam").innerHTML="Category: Cities";
+                }
+              
+          }else if(gameDiff==1) //if was choosen difficulty hard
+              {document.getElementById("difshowdurgam").innerHTML="Difficulty: Hard"
+                  if(gameCat==0) //if was choosen category animals
+                    {document.getElementById("catshowdurgam").innerHTML="Category: Animals";
+                        random = Math.floor(Math.random()*hardAnimals.length); //generate random  word from field hardAnimals 
+                        word = hardAnimals[random]; //save random word from field hardAnimals to var word
+                        document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
+                    }else if(gameCat==1) //if was choosen category cities
+                    {document.getElementById("catshowdurgam").innerHTML="Category: Cities";
+                        random = Math.floor(Math.random()*hardCities.length);  //generate random  word from field hardCities  
+                        word = hardCities[random]; //save random word from field easyCities to var word
+                        document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
+                    }
+              } 
+            document.getElementById('score').innerHTML = "Score: "+score; // print score
+                      document.getElementById("lives").innerHTML="Lives: "+lives; //print lives
+                      document.getElementById("gWord").innerHTML= s;
+                      
+           for(var i = 0; i<word.length;i++)  //browse word length
+           {
+           answerArray[i]="<span style='color:#cd6a02;'>_</span>";    //write underlines exact position
+           }
+           var s=answerArray.join(" "); //insert between underlines space
+           document.getElementById("gWord").innerHTML= s; //write on screen underlines
+            document.getElementById('btnHint').style.display = "block";
+           document.getElementById('hintSentence').style.display = "block"; 
+        
+}

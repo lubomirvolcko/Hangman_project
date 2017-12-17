@@ -3,14 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
-    <link type="text/css" href="hangman.css" rel="stylesheet">
-    <script src="hangman.js"></script>
+    <link type="text/css" href="hangman.css" rel="stylesheet"> <!-- link to css -->
+    <script src="hangman.js"></script> <!-- link to javascript -->
 	<title>HANGMAN</title>
 </head>
   
     
 <body onload="game()"> <!-- ### BODY ### -->
-    
+    <div id="container"> <!-- container main page -->
 	<div id="divLogo"><img id="logo" src="img/HangmanSovy_logo.png"></div> <!-- LOGO on entrypage -->
 	  
 	<div id="newgame"> <!-- BUTTON newgame -->
@@ -34,7 +34,8 @@
     </div>
 	
 	<div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
-	  
+    </div>
+    
 	<div id="game">
 	  
     <div id="header">     <!-- HEADER -->
@@ -45,17 +46,13 @@
     </div> 
         <div id="rrBtn">
         <img id="btnReset" src="img//buttons/btn_reset_2.png">
-        <div id="reset"><div id="rrTxtR">Reset</div></div> <!--BUTTON FOR RESET GAME-->
+        <div id="reset" onclick="reset()"><div id="rrTxtR" onclick="reset()">Reset</div></div> <!--BUTTON FOR RESET GAME-->
     </div>
     <div id="score">Score:</div> <!-- SCORE -->
     <div id="lives"></div> <!-- LIVES -->    
     </div>
     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
         
-
-   
-    
-      
     <div id="alphabet"> <!-- TABLE OF ALPHABET -->
         <table width="380px">
             <tr>
@@ -109,8 +106,9 @@
         
      <div id="hint" onclick="funHint()"> <!-- BUTTON HINT -->
          <div id="btnHint">HINT</div>
+         <div id="hintSentence"></div>
     </div> <!-- Button Hint -->
-     <div id="hintSentence"></div>
+     
          
    
         
