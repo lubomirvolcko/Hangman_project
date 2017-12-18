@@ -12,7 +12,9 @@
 <body onload="game()"> <!-- ### BODY ### -->
     <div id="container"> <!-- container main page -->
 	<div id="divLogo"><img id="logo" src="img/HangmanSovy_logo.png"></div> <!-- LOGO on entrypage -->
-	  
+	
+     
+        
 	<div id="newgame"> <!-- BUTTON newgame -->
 		<div id="btnNewgame" onclick="funNewgame()">NEW GAME</div>
 	</div>
@@ -20,18 +22,6 @@
 	<div id="play"> <!-- BUTTON play -->
 		<div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
 	</div>
-
-	<div id="difficulty"> <!-- difficulty -->
-        <div class="text">Choose a difficulty:</div>
- 		<div class="btn" id="btnEasy" value="0" onclick="fundifficulty(0)">Easy</div>
-		<div class="btn" id="btnHard" value="1" onclick="fundifficulty(1)">Hard</div>
-	</div>
-
-	<div id="category"> <!-- CATEGORY -->
-		<div class="text">Choose a category:</div>
-		<div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
-		<div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
-    </div>
 	
 	<div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
     </div>
@@ -52,6 +42,22 @@
     <div id="lives"></div> <!-- LIVES -->    
     </div>
     <div id="header_buttom_line"></div> <!-- HEADER BUTTON LINE -->
+        
+        <div id="difshowdurgam"></div>
+           
+        <div id="catshowdurgam"></div>
+        
+        <div id="difficulty"> <!-- difficulty -->
+        <div class="text">Choose a difficulty:</div>
+ 		<div class="btn" id="btnEasy" value="0" onclick="fundifficulty(0)">Easy</div>
+		<div class="btn" id="btnHard" value="1" onclick="fundifficulty(1)">Hard</div>
+	</div>
+
+	<div id="category"> <!-- CATEGORY -->
+		<div class="text">Choose a category:</div>
+		<div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
+		<div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
+    </div>
         
     <div id="alphabet"> <!-- TABLE OF ALPHABET -->
         <table width="380px">
@@ -94,9 +100,11 @@
                 <td class="letter" id="Z" onclick="checkLetter(25)">Z</td>
             </tr>
         </table>
-       <div id="difshowdurgam"></div>
-           
-        <div id="catshowdurgam"></div>
+          
+        <div id="footer">  <!-- footer & button line -->
+        <div id="gWord"></div>
+      </div> 
+        
     </div> <!-- TABLE OF ALPHABET -->
       
     <div id="divMistake"> <!-- DIV images of MISTAKES -->
@@ -112,10 +120,6 @@
          
    
         
-     <div id="footer">  <!-- footer & button line -->
-        <div id="gWord"></div>
-        <div id="header_buttom_line2"></div> 
-      </div> 
 	</div>
     
   </body> <!-- ### BODY ### -->
