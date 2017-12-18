@@ -167,7 +167,8 @@ function checkLetter(value) { //function for chcecking pressed letter
             }else if(lives<=0) //if lives are 0 or less
                 {
                     document.getElementById("lives").innerHTML="Game Over!"; //print Game Over!
-                    checkScore=score; //set value of score to checkScore
+
+                   
                     var s=answerArray.join(" "); //insert between underlines space
                     document.getElementById("gWord").innerHTML= "<span style='color:#cd6a02;'>"+word+"</span>"; //write on screen underlines
                 }
@@ -214,6 +215,13 @@ function funHint () {
                     score-=10;
                 }
 		}
+        else if (lives==0)
+        {
+            score=0;
+
+
+        }
+document.getElementById('hintSentence').style.display = "block"; //after click show hint 
 }
 
 function game() { //function for game
@@ -297,11 +305,16 @@ function game() { //function for game
     
 } /* ### END OF FUNCTION game ###*/
 
+
+
+
+
 function reset () {
 var checkReset = 1;
 score=0;
 lives=10;
 checkWord=0;
+ 
 for(var i = 0; i<word.length;i++)  //browse word length
            {
            answerArray[i]="";    //write underlines exact position
@@ -350,7 +363,21 @@ document.getElementById('lives').innerHTML = "Lives: "+lives;
            }
            var s=answerArray.join(" "); //insert between underlines space
            document.getElementById("gWord").innerHTML= s; //write on screen underlines
-            document.getElementById('btnHint').style.display = "block";
-           document.getElementById('hintSentence').style.display = "block"; 
+             
+              document.getElementById('btnHint').style.display = "block"; //show hint button
+              
+              document.getElementById('hintSentence').style.display = "none"; //hide previously hintSentence
+              
+
+
+
+          
+
+
+
+          
         
 }
+
+
+
