@@ -23,27 +23,44 @@ var hardCities = ["BELMOPAN", "BIŠKEK", "BRIDGETOWN","BUJUMBURA","CARACAS","COT
 "KONAKRY","KOROR","LIBREVILLE","LOME","LUSAKA","MAMOUDZOU","MANAGUA","MASKAT","MONTEVIDEO","MORONI","NAIROBI",
 "NASSAU","NIAMEY","NUUK","OUAGADOUGOU","PALIKIR","PARAMARIBO","PRAIA","QUITO","RABAT","SANA","SKOPJE","SANTIAGO",
 "STANLEY","SUVA","THIMPHU"];                                     //defined field of cities
-var hintEasyAnimals = ["CAT", "MOUSE", "HORSE", "DOG", "LION","WORM","FOX","SWAN","FROG","BEAR",
-"PIG","ZEBRA","ELEPHANT","TIGER","PANTHER","BIRD","HAMSTER","MOUSE","DUCK","PENGUIN","CHICKEN",
-"COW","SHEEP","GOAT","FISH","RAT","BUTTERFLY","BEE","SCORPION","SPIDER","FLY","BUNNY", "TURTLE","JELLYFISH","SHARK","DOLPHIN","SNAIL","SNAKE","CENTIPEDE","MONKEY","DEER","BEAVER",
-"CROCODILE","CAMEL","SEAL","GIRAFFE","EAGLE","FERRET","KANGAROO","OSTRICH","BISON","COALA"
-,"PANDA"];
-var hintEasyCities = ["BRATISLAVA", "PARIS", "PRAGUE","SALZBURG","VENICE","DUBAI","CHARLESTON",
-"BRUGES","KRAKOW","BEIRUT","LISBON","SYDNEY","BANGKOK","AMSTERDAM","ROME","ISTANBUL",
-"BERLIN","CAPE","FLORENCE","MARRAKECH","PETERSBURG","BUDAPEST","LONDON","PARIS","TOKYO","BANGKOK",
-"KOSICE","VIENNA","INNSBRUCK","LINZ","OSLO","MONTREAL","LISABON","MOSKVA","MISKOLC","BRNO","DUBLIN",
-"DHAKA","DALLAS","KRAKOW","PRESOV","GRAZ","LONDON","TRNAVA","STOCKHOLM","SINGAPORE","BALI","BOSTON",
-"HAMBURG","VARSAVA","MIAMI","HONGKONG","SYDNEY","BRUSSELS","CARTAGENA","HOLLYWOOD","DELHI"];
-var hintHardAnimals = ["AARDVARK","BABOON", "SEAL","FALCON","PENGUIN","CRAB","SPITZ","GERBIL",
-"PINSCHER","GHARIAL","CATTLE","HIMALAYAN","YAK","ZEBU","WOODPECKER","WOLVERINE","RHINOCEROS","CAPUCHIN",
-"WHIPPET","WASP","WALRUS","SWAN","UAKARI","UGUISU","VULTURE","STOAT","LIONFISH","GECKO","LADYBIRD",
-"KAKAPO","KUDU","INDRI","IMPALA","JACKAL","INDRI","IBIS","GROUSE","GOPHER","HIPPOPOTAMUS",
-"HERON","HAVANESE","GAR","TAMARIN"];
-var hintHardCities = ["BELMOPAN", "BIŠKEK", "BRIDGETOWN","BUJUMBURA","CARACAS","COTONOU","DAUHA","DODOMA",
-"FREETOWN","GABORONE","CHARTUM","ISLAMABAD","JAMESTOWN","JEREVAN","KAMPALA","KATHMANDU","KIGALI","KINGSTON",
-"KONAKRY","KOROR","LIBREVILLE","LOME","LUSAKA","MAMOUDZOU","MANAGUA","MASKAT","MONTEVIDEO","MORONI","NAIROBI",
-"NASSAU","NIAMEY","NUUK","OUAGADOUGOU","PALIKIR","PARAMARIBO","PRAIA","QUITO","RABAT","SANA","SKOPJE","SANTIAGO",
-"STANLEY","SUVA","THIMPHU"];
+var hintEasyAnimals = ["COTTON BALL", "LOVES CHEESE", "STIFLE SHOE", "BEST FRIEND OF HUMAN", "KING OF THE ANIMALS","HIDES IN APPLE","GINGER RED COAT","THE UGLY DUCKLING",
+                       "TURNS INTO THE PRINCE","WINTER SLEEP", "ROLLING IN THE MUD","CROSSWALK","BIG TRUNK","STRIPED WILD CAT","BLACK WILD CAT","KNOWS HOW TO FLY",
+                       "RUNNING AROUND IN THE WHEEL","LOVES CHEESE","TOY IN THE BATH","BIRD IN A TAILCOAT","LAYS EGGS", "GIVES MILK","COTTON FUR","BEARD AND HORNS",
+                       "BREATHE UNDER THE WATER","LONG TAILED MOUSE","COLORFUL WINGS","HONEY MAKER","POISON ON TAIL","WEB","ANNOYING BUG","CARROT", "CARAPACE",
+                       "POISON TENTACLES","PADDLE ABOVE WATER","PLAYFUL FISH","HOUSE ON THE BACK","REPTILE","HUNDRED LEGS","HANGS ON THE TREES","MALES HAVE BIG HORNS",
+                       "BUILDS A DAM", "AN ACIENT LIZARD","HUNCHBACK","SEA LION","LONG NECK","KING OF BIRDS","LONG BODY MOUSE", "WEARS THE BABY IN THE BAG","HEAD IN THE SAND",
+                       "INDIAN HERD","CUTE SILVER BEAR","ASIAN BLACK AND WHITE BEAR"]; 	                             //defined field of hint easyAnimals
+var hintEasyCities = ["CAPITAL CITY OF SLOVAKIA", "EIFFEL TOWER", "CHARLES BRIDGE","MOZART’S BIRTHPLACE","CANALS","LARGEST CITY IN THE UNITED ARAB EMIRATES",
+                      "JAZZ DANCE", "CAPITAL CITY OF WEST FLANDERS ","CENTER OF SOUTH POLAND","CAPITAL CITY OF LABANON","CAPITAL CITY OF PORTUGAL",
+                      "WORLDS LARGEST NATURAL HARBOUR","CAPITAL CITY OF THAILAND","CLOGS","COLOSSEUM","THE LARGEST CITY IN TURKEY", "CAPITAL CITY OF GERMANY",
+                      "CAPITAL CITY OF SOUTH AFRICA","CAPITAL CITY OF TUSCANY","THE MAJOR CITY OD MORROCO","FORMER STALINGRAD","GRESHAM PALACE","BIG BEN",
+                      "TRIUMPHAL ARCH","THE CAPITAL CITY OF JAPAN","CAPITAL CITY OF THAILAND", "ST. ELISABETH CATHEDRAL","SACHER TART","CAPITAL CITY OF TYROL",
+                      "THE CAPITAL OF UPPER AUSTRIA","CAPITAL CITY OF NORWAY","CITY OF MARY","THE CAPITAL CITY OF PORTUGAL","SAINT BASILS CATHEDRAL",
+                      "CASTLE OF DIÓSGYőR","SECOND LARGEST CITY IN CZECH REPUBLIC","THE LARGEST CITY OF IRELAND", "CAPITAL CITY OD BANGLADESH","MARGARET HUNT HILL BRIDGE",
+                      "WAWEL CATHEDRAL","SALTERN IN EAST SLOVAKIA","CAPITAL OF STYRIA","NOTTING HILL CARNIVAL","JAN KONIAREK GALLERY","CAPITAL OF SWEDEN",
+                      "GARDENS BY THE BAY","THE ISLAND OF THE GODS","TEA PARTY", "ST NKOLAI MAMORIAL IN GERMANY","THE CAPITAL CITY OF POLAND",
+                      "THE BARNACLE HISTORIC STATE PARK","FOURTH MOST DENSLEY POPULATED REGION IN THE EARTH","JORN UTZON’S OPERA HOUSE","CAPITAL OF BELGIUM","BOCAGRANDE HARBOUR","WALK OF FAME","CAPITAL OF INDIA"]; 	                             //defined field of hint easyCities
+var hintHardAnimals = ["PIG-LIKE SNOUT","RED BACK MONKEY", "SEA LION","BIRD OF PREY","BIRD THAT CAN’T FLY","SEA SPIDER WITH TWO CLAWS",
+                       "DOG WITH WHITE THICK FUR AND CURLED TAIL","DESERT RAT", "LITTLE SIZED DOBERMAN","FISH-EATING CROCODILE","ADULT COW",
+                       "WHITE RABBIT WITH BLACK EARS","LONG-HAIRED BULL","AFRICAN COW","TREE DOCTOR","SKUNK BEAR","NOSE HORN","ORGAN GRINDER MONKEY", 
+                       "SKINNY DOG","BEE-LIKE INSECT","SEAL WITH LARGE TEETH","THE UGLY DUCKLING","RED FACED MONKEY","JAPANESE BUSH WARBLER",
+                       "SCAVENGING BIRD OF PRAY","SHORT TAILED WEASEL","VENOMOUS MARINE FISH","LITTLE LIZARD","RED BUG WITH DOTS", 
+                       "NEW ZELAND’S OWL-PAROT","THE BIGGEST ANTILOPE","THE LARGEST LEMUR","MEDIUM-SIZED ANTELOPE","DOG-LIKE WOLF",
+                       "THE LARGEST LEMUR","LONG-LEGGED WADING BIRD","CHICKEN-BUILT LIKE BIRD FROM TEXAS","BIG TEETHWILD MOUSE",
+                       "RIVER HORSE", "LONG-LEGGED FRESHWATER BIRD","BISCHON TYPE DOG","GAR","FISH WITH LONG SLIM NOSE"];                                //defined field of hint hardAnimals	
+var hintHardCities = ["CAPITAL CITY OF BELIZE", "BIŠKEK", "CAPITAL CITY OF BARBADOS","CAPITAL CITY OF BURUNDI",
+                      "CAPITAL CITY OF VENEZUELA","THE LARGEST CITY OF BENIN","CAPITAL CITY OF STATE OF QATAR",
+                      "CAPITAL CITY OF TANZANIA", "CAPITAL CIY OF SIERRA LEONE","CAPITAL CITY OF BOTSWANA",
+                      "CAPITAL CITY OF SUDAN","CAPITAL CITY OF PAKISTAN","AMERICA’S FIRST PERMANENT ENGLISH COLONY",
+                      "CAPITAL CITY OF ARMENIA","CAPITAL CITY OF UGANDA","CAPITAL CITY OF NEPAL","CAPITAL CITY OF RWANDA",
+                      "CAPITAL CITY OF JAMAICA", "CAPITAL CITY OF GUINEA","MAIN COMMERCIAL CITY OF PALAU",
+                      "CAPITAL CITY OF GABON","THE CAPITAL CITY OF TOGO","CAPITAL CITY OF ZAMBIA","CAPITAL CITY OF MAYOTTE",
+                      "CAPITAL CITY OF NIKARAGUA","CAPITAL CITY OF OMAN","THE LARGEST CITY OF URUGUAY","CAPITAL CITY OF COMOROS",
+                      "CAPITAL CITY OF KENYA", "CAPITAL CITY OF BAHAMAS","CAPITAL CITY OF NIGER","CAPITAL CITY OF GREENLAND",
+                      "CAPITAL CITY OF BURKINA FASO","CAPITAL CITY OF MICRONESIA","CAPITAL CITY OF SURINAM",
+                      "GHOST TOWN IN UTAH","CAPITAL CITY OF ECUADOR","CAPITAL CITY OF MAROCCO","CAPITAL CITY OF YEMEN",
+                      "CAPITAL CITY OF MACEDONIA","CAPITAL CITY OF CHILE", "CAPITAL CITY OF THE FALKLAND ISLANDS",
+                      "CAPITAL CITY OF FIJI","CAPITAL CITY OF BHUTAN"];                                 //defined field of hint hardCities
 var gameDiff;                                                 //defined for chosen difficulty
 var gameCat;                                                  //defined for chosen category
 var alphabet = ['A', 'B', 'C', 'D', 'E',
@@ -59,6 +76,7 @@ var lives=10;                                                 //define for lives
 var score=0;                                                  //define for score
 var checkWord=0;                                              //define for counting right guessed word
 var checkScore;                                               //define for finish score
+var imgMistake = document.getElementById('imgMistake');       //define for div mistake
 /* ##### END OF VARS #### */
 
 function funNewgame(){ //set visible/unvisible div in html
@@ -129,7 +147,7 @@ function checkLetter(value) { //function for chcecking pressed letter
       if (j == -1 && lives>0 && checkScore!=score && checkWord!=word.length) 
       {
           lives -= 1; //sub lives of 1
-          var imgMistake = document.getElementById('imgMistake');
+          
           switch(lives) //printing img when is mistake
           {
                 case 9: imgMistake.src="img/mistakes/mistake1.png";break; //when lives=9 set other img
@@ -160,6 +178,7 @@ function checkLetter(value) { //function for chcecking pressed letter
                     {
                         document.getElementById("lives").innerHTML="You win!"; //print You win! if user guess the word
                         checkScore=score; //set value of score to checkScore
+                        imgMistake.src="img/mistakes/win.gif";
                     }else{
                         document.getElementById("lives").innerHTML="Lives: "+lives; //print lives
                     }
@@ -167,6 +186,7 @@ function checkLetter(value) { //function for chcecking pressed letter
             }else if(lives<=0) //if lives are 0 or less
                 {
                     document.getElementById("lives").innerHTML="Game Over!"; //print Game Over!
+                    imgMistake.src="img/mistakes/gameover.gif";
 
                    
                     var s=answerArray.join(" "); //insert between underlines space
@@ -314,7 +334,7 @@ var checkReset = 1;
 score=0;
 lives=10;
 checkWord=0;
- 
+
 for(var i = 0; i<word.length;i++)  //browse word length
            {
            answerArray[i]="";    //write underlines exact position
@@ -331,11 +351,13 @@ document.getElementById('lives').innerHTML = "Lives: "+lives;
                 {
                     random = Math.floor(Math.random()*easyAnimals.length); //generate random  word from field easyAnimals
                     word = easyAnimals[random]; //save random word from field easyAnimals to var word
+                    console.log(word);
                     document.getElementById("catshowdurgam").innerHTML="Category: Animals";
                 }else if(gameCat==1) //if was choosen category cities
                 {
                     random = Math.floor(Math.random()*easyCities.length); //generate random  word from field easyCities 
                     word = easyCities[random]; //save random word from field easyCities to var word
+                    console.log(word);
                     document.getElementById("catshowdurgam").innerHTML="Category: Cities";
                 }
               
@@ -345,11 +367,13 @@ document.getElementById('lives').innerHTML = "Lives: "+lives;
                     {document.getElementById("catshowdurgam").innerHTML="Category: Animals";
                         random = Math.floor(Math.random()*hardAnimals.length); //generate random  word from field hardAnimals 
                         word = hardAnimals[random]; //save random word from field hardAnimals to var word
+                        console.log(word);
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
                     }else if(gameCat==1) //if was choosen category cities
                     {document.getElementById("catshowdurgam").innerHTML="Category: Cities";
                         random = Math.floor(Math.random()*hardCities.length);  //generate random  word from field hardCities  
                         word = hardCities[random]; //save random word from field easyCities to var word
+                        console.log(word);
                         document.getElementById('lives').innerHTML = "Lives: "+lives; //print lives
                     }
               } 

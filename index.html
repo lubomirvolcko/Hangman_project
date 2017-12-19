@@ -22,6 +22,18 @@
 	<div id="play"> <!-- BUTTON play -->
 		<div class="btn" id="btnPlay" onclick="game()">PLAY!</div>
 	</div>
+        
+    <div id="difficulty"> <!-- difficulty -->
+        <div class="text">Choose a difficulty:</div>
+ 		<div class="btn" id="btnEasy" value="0" onclick="fundifficulty(0)">Easy</div>
+		<div class="btn" id="btnHard" value="1" onclick="fundifficulty(1)">Hard</div>
+	</div>
+
+	<div id="category"> <!-- CATEGORY -->
+		<div class="text">Choose a category:</div>
+		<div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
+		<div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
+    </div>
 	
 	<div><img id="mainimg" src="img/mainImg.png"></div> <!-- IMAGE mainimg entry page -->
     </div>
@@ -36,7 +48,7 @@
     </div> 
         <div id="rrBtn">
         <img id="btnReset" src="img//buttons/btn_reset_2.png">
-        <div id="reset" onclick="reset()"><div id="rrTxtR" onclick="reset()"  >Reset</div></div> <!--BUTTON FOR RESET GAME-->
+        <div id="reset" onclick="reset()"><div id="rrTxtR" onclick="reset()">Reset</div></div> <!--BUTTON FOR RESET GAME-->
     </div>
     <div id="score">Score:</div> <!-- SCORE -->
     <div id="lives"></div> <!-- LIVES -->    
@@ -46,18 +58,6 @@
         <div id="difshowdurgam"></div>
            
         <div id="catshowdurgam"></div>
-        
-        <div id="difficulty"> <!-- difficulty -->
-        <div class="text">Choose a difficulty:</div>
- 		<div class="btn" id="btnEasy" value="0" onclick="fundifficulty(0)">Easy</div>
-		<div class="btn" id="btnHard" value="1" onclick="fundifficulty(1)">Hard</div>
-	</div>
-
-	<div id="category"> <!-- CATEGORY -->
-		<div class="text">Choose a category:</div>
-		<div class="btn" id="btnAnimals" value="0" onclick="funCategory(0)">Animals</div>
-		<div class="btn" id="btnCities" value="1" onclick="funCategory(1)">Cities</div>    
-    </div>
         
     <div id="alphabet"> <!-- TABLE OF ALPHABET -->
         <table width="380px">

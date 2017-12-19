@@ -146,7 +146,7 @@ body{
 	font-size: 30px;
     float: inherit; 
     text-align: center;
-    font-size: 80px;
+    font-size: 50px;
     margin-top: -40px;
 }                             
 
@@ -154,10 +154,6 @@ body{
 #header_buttom_line2{
     width: auto;
     height: 8px;
-    background: -webkit-linear-gradient(left, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #f8e6d4, #cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02,#cd6a02, #f8e6d4 ); /* Standard syntax (must be last) */
     margin-top: -120px;                              /* End of footer */
 }
 
@@ -218,25 +214,29 @@ body{
 
 /* div hint */
 #hint {
-    margin-top: 590px;
+    margin-top: 610px;
     margin-bottom: 60px;
     text-align: center;
 }
 
 /* sentennce hint */
 #hintSentence {
-    margin-bottom: 50px;
+    margin-top: 50px;
     font-size: 50px;
-	color: #009fbc;
+	color: #cc6600;
     text-align: center;
 }
 
 /* div footer */
-#footer{                                                /* Footer */
-    background-color: #6633CC;
+#footer{  /* Footer */
+    background-color: #cacccd;
+    background: linear-gradient(#f8e6d4, #cacccd); /* Standard syntax (must be last) */    
     width: auto;
     height: auto;
     margin-top: 150px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    
 }
 
 /* buttons new game & play */
@@ -263,6 +263,8 @@ body{
 	float: left;
 	text-align: right;
     margin-left: 50px;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 /* img under buttons of buttons of difficulty & category */
@@ -279,5 +281,14 @@ body{
     font-weight: 200px;
     position: relative;
     top: -35px;
-    left: 36px;    
+    left: 36px; 
+    float: left;
+}
+
+#difshowdurgam {
+    margin-left: 20px;
+}
+
+#catshowdurgam {
+    margin-left: 200px;
 }
