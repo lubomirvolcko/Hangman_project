@@ -76,7 +76,6 @@ var lives=10;                                                 //define for lives
 var score=0;                                                  //define for score
 var checkWord=0;                                              //define for counting right guessed word
 var checkScore;                                               //define for finish score
-var imgMistake = document.getElementById('imgMistake');       //define for div mistake
 /* ##### END OF VARS #### */
 
 function funNewgame(){ //set visible/unvisible div in html
@@ -147,7 +146,7 @@ function checkLetter(value) { //function for chcecking pressed letter
       if (j == -1 && lives>0 && checkScore!=score && checkWord!=word.length) 
       {
           lives -= 1; //sub lives of 1
-          
+          var imgMistake = document.getElementById('imgMistake');
           switch(lives) //printing img when is mistake
           {
                 case 9: imgMistake.src="img/mistakes/mistake1.png";break; //when lives=9 set other img
