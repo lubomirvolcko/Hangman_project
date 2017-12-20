@@ -78,7 +78,7 @@ var checkWord=0;                                              //define for count
 var checkScore;                                               //define for finish score
 /* ##### END OF VARS #### */
 
-function funNewgame(){ //set visible/unvisible div in html
+function funNewgame() { //set visible/unvisible div in html
     document.getElementById('newgame').style.display = "none"; //BUTTON newgame
     document.getElementById('difficulty').style.display = "block"; //DIV difficility
     document.getElementById('alphabet').style.display = "none"; //DIV alphabet
@@ -108,7 +108,7 @@ function fundifficulty(value){ //set visible/unvisible div in html
     document.getElementById('reset').style.display = "none";
 } /* ### END OF FUNCTION fundifficulty ### */
 
-function funCategory(value){ //set visible/unvisible div in html
+function funCategory(value) { //set visible/unvisible div in html
     document.getElementById('play').style.display = "block"; //BUTTON play
     document.getElementById('difficulty').style.display = "none"; //DIV difficility
     document.getElementById('category').style.display = "none"; //DIV category 
@@ -177,7 +177,7 @@ function checkLetter(value) { //function for chcecking pressed letter
                     {
                         document.getElementById("lives").innerHTML="You win!"; //print You win! if user guess the word
                         checkScore=score; //set value of score to checkScore
-                        imgMistake.src="img/mistakes/win.gif";
+                        document.getElementById('imgMistake').src="img/mistakes/win.gif";
                     }else{
                         document.getElementById("lives").innerHTML="Lives: "+lives; //print lives
                     }
@@ -200,7 +200,7 @@ function checkLetter(value) { //function for chcecking pressed letter
 
         } /* ### END OF FUNCTION checkLetter ### */
 
-function funHint () {
+function funHint() {
     var checkBtnHint = 1;
 	document.getElementById('btnHint').style.display = "none";
 	if(checkBtnHint==1)
@@ -324,11 +324,7 @@ function game() { //function for game
     
 } /* ### END OF FUNCTION game ###*/
 
-
-
-
-
-function reset () {
+function reset() {
 var checkReset = 1;
 score=0;
 lives=10;
@@ -390,17 +386,5 @@ document.getElementById('lives').innerHTML = "Lives: "+lives;
               document.getElementById('btnHint').style.display = "block"; //show hint button
               
               document.getElementById('hintSentence').style.display = "none"; //hide previously hintSentence
-              
-
-
-
-          
-
-
-
-          
-        
+   
 }
-
-
-
